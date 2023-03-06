@@ -7,5 +7,6 @@ des APIs proposées dans une liste donnée.
 ## How to use the website
 
 ## Credits
+https://docs.pokemontcg.io
 
 ## License
