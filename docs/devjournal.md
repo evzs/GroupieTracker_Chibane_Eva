@@ -16,3 +16,8 @@ Afternoon :
 - getting a better grasp on how to link structures and external data, do need to polish up on how to handle API requests
 - wrapping my head around templates too, trying to put everything together
 - might start doing this with the actual API (there is actual documentation and I made something work, but at the moment I do have a lot of brain fog and cannot get myself into it without physically straining my neurons).
+
+Evening :
+- managed to make the templates + server + API requests work together
+- I now have an idea on how to present data, I need to sort out which will be relevant to the content of the website
+- thinking about implementing a search bar/toggle filter system to search for specific cards, I do not know at the moment what I would like to present.
