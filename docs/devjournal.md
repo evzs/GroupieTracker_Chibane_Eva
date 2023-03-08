@@ -42,6 +42,6 @@ Not a very productive day overall and I might stop there, will gain more energy 
 Approximations of time spent on the project each day (usually tracked)
 | Date  | Time spent |
 | ----- | ------------ |
-| 20230306 | Around 3 hours |
-| 20230307 | A bit more than 8 hours |
-| 20230307 | A bit more than 3 hours |
+| 2023-03-06 | Around 3 hours |
+| 2023-03-07 | A bit more than 8 hours |
+| 2023-03-07 | A bit more than 3 hours |
