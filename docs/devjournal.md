@@ -1,6 +1,8 @@
 # "DEV JOURNAL"
 Daily logs of my progression on the project and contributions to it.
 
+## DETAILED REPORT
+More or less
 ### 2023-03-06
 - API choice
 - Repository setup
@@ -28,4 +30,18 @@ Morning :
 - html and go are properly linked together
 - the structs are kind of a big dump, I will have to sort out which ones I will definitely keep for usage
 - for now, you can actually search a pokemon name and get its cards listed: I used the documentation of the API for Golang to make the requests since they have their own package
-- On that, I will have to learn all its little quirks to understand better what I'm going to do with it
+- on that, I will have to learn all its little quirks to understand better what I'm going to do with it
+
+Afternoon :
+- decided to get back on the design, truly hesitating on a dark or light theme, as well as wondering if I should do something clear and concise or if I want to pimp it a bit and make it extra for no reason, I do not know if it corresponds to the criteria for these kind of websites so I'm still undecided...
+- started laying out a bit where things should go, no real content nor responsive yet (header, body, footer... still wondering if I should have other pages other than the ones required)
+Not a very productive day overall and I might stop there, will gain more energy for tomorrow.
+
+
+## TIME TRACKED
+Approximations of time spent on the project each day (usually tracked)
+| Date  | Time spent |
+| ----- | ------------ |
+| 20230306 | Around 3 hours |
+| 20230307 | A bit more than 8 hours |
+| 20230307 | A bit more than 3 hours |
