@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GroupieTracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pokemon TCG Search</title>
 </head>
 <body>
-<h1>Just checking</h1>
+<form method="GET">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <input type="submit" value="Search">
+</form>
+{{ if . }} {{ range . }}
+
+<h1>{{ .Name }}</h1>
+<img src="{{ .Images.Small }}" alt="{{ .Name }}">
+<p>ID: {{ .ID }}</p>
+<p>Type: {{ .Types }}</p>
+<p>Supertype: {{ .Supertype }}</p>
+<p>Subtypes: {{ range .Subtypes }}{{ . }} {{ end }}</p>
+<p>HP: {{ .Hp }}</p>
+<p>Evolves From: {{ .EvolvesFrom }}</p>
+<p>Evolves To: {{ .EvolvesTo }}</p>
+<h2>Abilities</h2>
+{{ range .Abilities }}
+
+<p>{{ .Name }} ({{ .Type }}) - {{ .Text }}</p>
+{{ end }}
+
+
+<h2>Attacks</h2>
+{{ range .Attacks }}
+
+<p>{{ .Name }} ({{ .Cost }}) - {{ .Text }} - {{ .Damage }}</p>
+{{ end }}
+
+
+<h2>Weaknesses</h2>
+{{ range .Weaknesses }}
+
+<p>{{ .Type }} - {{ .Value }}</p>
+{{ end }}
+
+
+<h2>Resistances</h2>
+{{ range .Resistances }}
+
+<p>{{ .Type }} - {{ .Value }}</p>
+{{ end }}
+
+
+<h2>Other info</h2>
+<p>Retreat Cost: {{ .RetreatCost }}</p>
+<p>Converted Retreat Cost: {{ .ConvertedRetreatCost }}</p>
+<p>Number: {{ .Number }}</p>
+<p>Artist: {{ .Artist }}</p>
+<p>Rarity: {{ .Rarity }}</p>
+<p>National Pokedex N: {{ range .NationalPokedexNumbers }}{{ . }} {{ end }}</p>
+<p>Legalities: {{ .Legalities.Unlimited }}</p>
+{{ end }} {{ end }}
+
 </body>
+</html>
