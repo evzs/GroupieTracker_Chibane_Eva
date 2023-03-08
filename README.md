@@ -8,4 +8,4 @@ from an API from a given list.
 ---
 
 ## Credits
-This website was created by [Eva C.]([https://github.com/evzs) and uses the [Pokémon TCG API](https://pokemontcg.io) to fetch data about Pokémon cards.
+This website was created by [evzs](https://github.com/evzs) and uses the [Pokémon TCG API](https://pokemontcg.io) to fetch data about Pokémon cards.
