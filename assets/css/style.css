@@ -7,11 +7,10 @@
 }
 
 html, body {
-    height: 3000px;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    background-color: #070f14;
+    background: rgb(14, 14, 14);
     scroll-behavior: smooth;
 }
 
@@ -24,19 +23,15 @@ html, body {
     height: 50vh;
     display: flex;
     flex-direction: column;
-align-items: center;
-background: #d3e4f8;
+    align-items: center;
     margin: 10vh 25vh 0 25vh;
     border-radius: 10px;
+    background: #DFDFDF;
 }
 
 /* HEADER */
 
 header {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(8, 19, 36, 0.75);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
     position: fixed;
     display: flex;
     align-items: center;
@@ -51,13 +46,59 @@ header {
     align-items: center;
 }
 
-/* NAVIGATION */
+/* nav */
 .nav-item {
-    display: inline-block;
+    display: inline-flex;
     margin: 0 16px;
     text-decoration: none;
     transition: all 0.3s ease;
-    color: #a5aec2;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 3px;
+    animation: nav-hover 1s ease;
+}
+
+@keyframes nav-hover {
+0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* buttons */
+.btn {
+    display: inline-flex;
+    margin: 0 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #CE2211;
+    box-shadow: inset 3px 0  #900b00;
+    color: #FFFFFF;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 3vh;
+    padding: 16px 32px;
+    height: 100px;
+    background: #4A4D54;
 }
 
 /* SCROLL BAR */
