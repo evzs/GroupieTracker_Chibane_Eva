@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PokeTracker</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="navigation">
+  <div class="logo">
+    <img src="../assets/img/logo.svg" alt="logo" style="height: 32px;">
+  </div>
+  <nav class="nav-bar">
+    <a class="nav-item">About</a>
+    <a class="nav-item">Search</a>
+    <a class="nav-item">Contact</a>
+  </nav>
+  <div class="button">
+    <a class="btn">
+      BUTTON
+    </a>
+    <a class="btn">
+      BUTTON
+    </a></div>
+</header>
+<div class="container">
+  <div class="form-box">
+    <h1>Anything you'd like to share?</h1>
+    <p>If you've got any suggestions on what I could do next, or want to give me feedback on what you enjoyed, or not, I'm all ears</p>
+    <form onSubmit=formSubmit>
+      <textarea name="message" id="message" placeholder="Share your thoughts here"></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-content">nothing to see here</div>
+  </footer>
+  <script>
+    const header = document.getElementById('navigation');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        header.style.opacity = '0';
+        header.style.pointerEvents = 'none';
+      } else {
+        header.style.opacity = '1';
+        header.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+</body>
+</html>

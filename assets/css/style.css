@@ -10,7 +10,7 @@ html, body {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    background: rgb(14, 14, 14);
+    background: #0E0E0EFF;
     scroll-behavior: smooth;
 }
 
@@ -26,7 +26,7 @@ html, body {
     align-items: center;
     margin: 10vh 25vh 0 25vh;
     border-radius: 10px;
-    background: #DFDFDF;
+    background: #232323;
 }
 
 /* HEADER */
@@ -74,6 +74,10 @@ header {
     }
 }
 
+#navigation {
+    transition: opacity 0.3s ease-in-out;
+}
+
 
 /* buttons */
 .btn {
@@ -98,7 +102,62 @@ footer {
     margin-top: 3vh;
     padding: 16px 32px;
     height: 100px;
-    background: #4A4D54;
+    background: #070707;
+}
+
+/* CONTACT FORM */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15vh 25vh 10vh 25vh;
+    padding: 50px;
+    border-radius: 10px;
+    background: #232323;
+    height: fit-content;
+    color: #ffffff;
+}
+
+.form-box h1 {
+    margin-top: 20px;
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.form-box p {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.form-box input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #CE2211;
+    box-shadow: inset 3px 0  #900b00;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form-box textarea {
+    margin-top: 20px;
+    width: 400px;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #313131;
 }
 
 /* SCROLL BAR */
