@@ -25,6 +25,7 @@ type Card struct {
 	Abilities              []Ability    `json:"abilities"`
 	Attacks                []Attack     `json:"attacks"`
 	Weaknesses             []Weakness   `json:"weaknesses"`
+	Set                    []Set        `json:"set"`
 	Resistances            []Resistance `json:"resistances"`
 	RetreatCost            []string     `json:"retreatCost"`
 	ConvertedRetreatCost   int          `json:"convertedRetreatCost"`
@@ -32,10 +33,7 @@ type Card struct {
 	Artist                 string       `json:"artist"`
 	Rarity                 string       `json:"rarity"`
 	NationalPokedexNumbers []int        `json:"nationalPokedexNumbers"`
-	Legalities             struct {
-		Unlimited string `json:"unlimited"`
-	} `json:"legalities"`
-	Images struct {
+	Images                 struct {
 		Small string `json:"small"`
 		Large string `json:"large"`
 	} `json:"images"`
@@ -65,6 +63,21 @@ type Resistance struct {
 	Value string `json:"value"`
 }
 
+type Set struct {
+	ID           string `json:"id"`
+	Name         string `json:"name"`
+	Series       string `json:"series"`
+	PrintedTotal int    `json:"printedTotal"`
+	Total        int    `json:"total"`
+	PtcgoCode    string `json:"ptcgoCode"`
+	ReleaseDate  string `json:"releaseDate"`
+	UpdatedAt    string `json:"updatedAt"`
+	Images       struct {
+		Small string `json:"small"`
+		Large string `json:"large"`
+	} `json:"images"`
+}
+
 func main() {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 
@@ -73,11 +86,22 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
 		name := r.URL.Query().Get("name")
+		setName := r.URL.Query().Get("set-name")
+
+		var query string
+		if name != "" && setName != "" {
+			query = fmt.Sprintf("name:\"%s\" set.name:\"%s\"", name, setName)
+		} else if name != "" {
+			query = fmt.Sprintf("name:\"%s\"", name)
+		} else if setName != "" {
+			query = fmt.Sprintf("set.name:\"%s\"", setName)
+		}
 
 		cards, err := c.GetCards(
-			request.Query(fmt.Sprintf("name:%s", name)),
-			request.PageSize(100),
+			request.Query(query),
+			request.PageSize(7),
 		)
+
 		if err != nil {
 			http.Error(w, fmt.Sprintf("Error fetching data from API: %s", err.Error()), http.StatusInternalServerError)
 			return
@@ -88,10 +112,16 @@ func main() {
 			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
+
+		fmt.Println(query)
+		for _, card := range cards {
+			fmt.Println(card.Name)
+		}
 	})
 
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatalf("Error starting HTTP server: %s", err.Error())
 	}
+
 }

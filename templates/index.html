@@ -4,9 +4,12 @@
     <title>Pokemon TCG Search</title>
 </head>
 <body>
-<form method="GET">
+<form method="GET" action="/search">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name">
+    <br>
+    <label for="set_name">Set Name:</label>
+    <input type="text" id="set-name" name="set-name">
     <br>
     <input type="submit" value="Search">
 </form>
@@ -56,8 +59,11 @@
 <p>Artist: {{ .Artist }}</p>
 <p>Rarity: {{ .Rarity }}</p>
 <p>National Pokedex N: {{ range .NationalPokedexNumbers }}{{ . }} {{ end }}</p>
-<p>Legalities: {{ .Legalities.Unlimited }}</p>
-{{ end }} {{ end }}
 
+<h2>Expansions</h2>
+<p>Name: {{ .Set.Name }}</p>
+<img src="{{ .Set.Images.Symbol }}" alt="{{ .Set.Name }}" style="height: 128px; width: auto;">
+<img src="{{ .Set.Images.Logo }}" alt="{{ .Set.Name }}" style="height: 128px; width: auto;">
+{{ end }} {{ end }}
 </body>
 </html>
