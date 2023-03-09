@@ -12,7 +12,7 @@
 </head>
 <body>
 <header id="navigation">
-    <div class="logo">
+    <div class="logo scrolldis">
     <img src="../assets/img/logo.svg" alt="logo" style="height: 32px;">
     </div>
     <nav class="nav-bar">
@@ -20,7 +20,7 @@
         <a class="nav-item">Search</a>
         <a class="nav-item" href="contact.html">Contact</a>
     </nav>
-    <div class="button">
+    <div class="button scrolldis">
         <a class="btn">
         BUTTON
     </a>
@@ -40,16 +40,21 @@ juste pr voir
     </footer>
 </div>
 <script>
-    const header = document.getElementById('navigation');
+    const header = document.querySelectorAll(".scrolldis");
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
-            header.style.opacity = '0';
-            header.style.pointerEvents = 'none';
+            header.forEach(elem => {
+                elem.style.opacity = '0';
+                elem.style.pointerEvents = 'none';
+            });
         } else {
-            header.style.opacity = '1';
-            header.style.pointerEvents = 'auto';
+            header.forEach(elem => {
+                elem.style.opacity = '1';
+                elem.style.pointerEvents = 'auto';
+            });
         }
     });
+
 </script>
 </body>
 </html>
