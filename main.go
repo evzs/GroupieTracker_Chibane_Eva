@@ -9,75 +9,6 @@ import (
 	"net/http"
 )
 
-type PokemonData struct {
-	Cards []Card `json:"data"`
-}
-
-type Card struct {
-	ID                     string       `json:"id"`
-	Name                   string       `json:"name"`
-	Supertype              string       `json:"supertype"`
-	Subtypes               []string     `json:"subtypes"`
-	Hp                     string       `json:"hp"`
-	Types                  []string     `json:"types"`
-	EvolvesFrom            string       `json:"evolvesFrom"`
-	EvolvesTo              []string     `json:"evolvesTo"`
-	Abilities              []Ability    `json:"abilities"`
-	Attacks                []Attack     `json:"attacks"`
-	Weaknesses             []Weakness   `json:"weaknesses"`
-	Set                    []Set        `json:"set"`
-	Resistances            []Resistance `json:"resistances"`
-	RetreatCost            []string     `json:"retreatCost"`
-	ConvertedRetreatCost   int          `json:"convertedRetreatCost"`
-	Number                 string       `json:"number"`
-	Artist                 string       `json:"artist"`
-	Rarity                 string       `json:"rarity"`
-	NationalPokedexNumbers []int        `json:"nationalPokedexNumbers"`
-	Images                 struct {
-		Small string `json:"small"`
-		Large string `json:"large"`
-	} `json:"images"`
-}
-
-type Ability struct {
-	Name string `json:"name"`
-	Text string `json:"text"`
-	Type string `json:"type"`
-}
-
-type Attack struct {
-	Name                string   `json:"name"`
-	Cost                []string `json:"cost"`
-	ConvertedEnergyCost int      `json:"convertedEnergyCost"`
-	Damage              string   `json:"damage"`
-	Text                string   `json:"text"`
-}
-
-type Weakness struct {
-	Type  string `json:"type"`
-	Value string `json:"value"`
-}
-
-type Resistance struct {
-	Type  string `json:"type"`
-	Value string `json:"value"`
-}
-
-type Set struct {
-	ID           string `json:"id"`
-	Name         string `json:"name"`
-	Series       string `json:"series"`
-	PrintedTotal int    `json:"printedTotal"`
-	Total        int    `json:"total"`
-	PtcgoCode    string `json:"ptcgoCode"`
-	ReleaseDate  string `json:"releaseDate"`
-	UpdatedAt    string `json:"updatedAt"`
-	Images       struct {
-		Small string `json:"small"`
-		Large string `json:"large"`
-	} `json:"images"`
-}
-
 func main() {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 
@@ -87,14 +18,21 @@ func main() {
 
 		name := r.URL.Query().Get("name")
 		setName := r.URL.Query().Get("set-name")
+		cardType := r.URL.Query().Get("types")
 
 		var query string
-		if name != "" && setName != "" {
-			query = fmt.Sprintf("name:\"%s\" set.name:\"%s\"", name, setName)
+		if name != "" && setName != "" && cardType != "" {
+			query = fmt.Sprintf("name:\"%s\" set.name:\"%s\" types:\"%s\"", name, setName, cardType)
+		} else if name != "" && cardType != "" {
+			query = fmt.Sprintf("name:\"%s\" types:\"%s\"", name, cardType)
+		} else if setName != "" && cardType != "" {
+			query = fmt.Sprintf("set.name:\"%s\" types:\"%s\"", setName, cardType)
 		} else if name != "" {
 			query = fmt.Sprintf("name:\"%s\"", name)
 		} else if setName != "" {
 			query = fmt.Sprintf("set.name:\"%s\"", setName)
+		} else if cardType != "" {
+			query = fmt.Sprintf("types:\"%s\"", cardType)
 		}
 
 		cards, err := c.GetCards(

@@ -4,15 +4,52 @@
     <title>Pokemon TCG Search</title>
 </head>
 <body>
+
+
+
 <form method="GET" action="/search">
-    <label for="name">Name:</label>
+    <label for="name">Name :</label>
     <input type="text" id="name" name="name">
     <br>
-    <label for="set_name">Set Name:</label>
+    <label for="set_name">Set Name :</label>
     <input type="text" id="set-name" name="set-name">
+    <br>
+    <input type="checkbox" id="types" name="types" value="Colorless">
+    <label for="types">Colorless</label>
+
+    <input type="checkbox" id="types" name="types" value="Darkness">
+    <label for="types">Darkness</label>
+
+    <input type="checkbox" id="types" name="types" value="Dragon">
+    <label for="types">Dragon</label>
+
+    <input type="checkbox" id="types" name="types" value="Fairy">
+    <label for="types">Fairy</label>
+
+    <input type="checkbox" id="types" name="types" value="Fighting">
+    <label for="types">Fighting</label>
+
+    <input type="checkbox" id="types" name="types" value="Fire">
+    <label for="types">Fire</label>
+
+    <input type="checkbox" id="types" name="types" value="Grass">
+    <label for="types">Grass</label>
+
+    <input type="checkbox" id="types" name="types" value="Lightning">
+    <label for="types">Lightning</label>
+
+    <input type="checkbox" id="types" name="types" value="Metal">
+    <label for="types">Metal</label>
+
+    <input type="checkbox" id="types" name="types" value="Psychic">
+    <label for="types">Psychic</label>
+
+    <input type="checkbox" id="types" name="types" value="Water">
+    <label for="types">Water</label>
     <br>
     <input type="submit" value="Search">
 </form>
+
 {{ if . }} {{ range . }}
 
 <h1>{{ .Name }}</h1>
