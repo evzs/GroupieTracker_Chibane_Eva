@@ -46,6 +46,9 @@ Afternoon :
 - tested on pokemon names on the expansion names, so if you look for example pikachu you'll get all the pikachu cards (within the set limit for now) and if you look for a specific expansion pack it will show all the cards from this one. Managed to make it work when you look for a pokemon and a specific expansion pack, if card(s) exist the data is returned.
 - trying to make everything work together little by little, there are probably more than a thousands of possibilities of search queries to be made so I would like to decide on how to present it
 
+Evening :
+- added the select type functionality, you can check boxes on the page to select it
+Overall not much done, I do undestand things better gradually however, will read more of the API documentation before stopping.
 
 
 ## TIME TRACKED
