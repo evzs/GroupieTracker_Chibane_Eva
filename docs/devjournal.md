@@ -35,6 +35,7 @@ Morning :
 Afternoon :
 - decided to get back on the design, truly hesitating on a dark or light theme, as well as wondering if I should do something clear and concise or if I want to pimp it a bit and make it extra for no reason, I do not know if it corresponds to the criteria for these kind of websites so I'm still undecided...
 - started laying out a bit where things should go, no real content nor responsive yet (header, body, footer... still wondering if I should have other pages other than the ones required)
+-
 Not a very productive day overall and I might stop there, will gain more energy for tomorrow.
 
 ### 2023-03-09
@@ -48,6 +49,7 @@ Afternoon :
 
 Evening :
 - added the select type functionality, you can check boxes on the page to select it
+-
 Overall not much done, I do undestand things better gradually however, will read more of the API documentation before stopping.
 
 
