@@ -37,6 +37,16 @@ Afternoon :
 - started laying out a bit where things should go, no real content nor responsive yet (header, body, footer... still wondering if I should have other pages other than the ones required)
 Not a very productive day overall and I might stop there, will gain more energy for tomorrow.
 
+### 2023-03-09
+Morning :
+- added some changes to the front, trying to fill up the navbar with content to navigate through
+
+Afternoon :
+- finally made search queries work independently from each other, or together
+- tested on pokemon names on the expansion names, so if you look for example pikachu you'll get all the pikachu cards (within the set limit for now) and if you look for a specific expansion pack it will show all the cards from this one. Managed to make it work when you look for a pokemon and a specific expansion pack, if card(s) exist the data is returned.
+- trying to make everything work together little by little, there are probably more than a thousands of possibilities of search queries to be made so I would like to decide on how to present it
+
+
 
 ## TIME TRACKED
 Approximations of time spent on the project each day (usually tracked)
@@ -44,4 +54,5 @@ Approximations of time spent on the project each day (usually tracked)
 | ----- | ------------ |
 | 2023-03-06 | Around 3 hours |
 | 2023-03-07 | A bit more than 8 hours |
-| 2023-03-07 | A bit more than 3 hours |
+| 2023-03-08 | A bit more than 3 hours |
+| 2023-03-09 | Around 5 hours |
