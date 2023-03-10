@@ -8,19 +8,19 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header id="navigation">
-  <div class="logo">
+  <div class="logo scrolldis">
     <img src="../assets/img/logo.svg" alt="logo" style="height: 32px;">
   </div>
-  <nav class="nav-bar">
-    <a class="nav-item">About</a>
-    <a class="nav-item">Search</a>
-    <a class="nav-item">Contact</a>
+  <nav class="nav-bar scrolldis">
+    <a class="nav-item" href="index.html">About</a>
+    <a class="nav-item" href="#">Search</a>
+    <a class="nav-item" href="contact.html">Contact</a>
   </nav>
-  <div class="button">
+  <div class="button scrolldis">
     <a class="btn">
       BUTTON
     </a>
@@ -33,24 +33,29 @@
     <h1>Anything you'd like to share?</h1>
     <p>If you've got any suggestions on what I could do next, or want to give me feedback on what you enjoyed, or not, I'm all ears</p>
     <form onSubmit=formSubmit>
-      <textarea name="message" id="message" placeholder="Share your thoughts here"></textarea>
+      <label for="message"></label><textarea name="message" id="message" placeholder="Share your thoughts here"></textarea>
       <br>
       <input type="submit" value="Submit">
     </form>
   </div>
-
+</div>
   <footer>
     <div class="footer-content">nothing to see here</div>
   </footer>
+
   <script>
-    const header = document.getElementById('navigation');
+    const header = document.querySelectorAll(".scrolldis");
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
-        header.style.opacity = '0';
-        header.style.pointerEvents = 'none';
+        header.forEach(elem => {
+          elem.style.opacity = '0';
+          elem.style.pointerEvents = 'none';
+        });
       } else {
-        header.style.opacity = '1';
-        header.style.pointerEvents = 'auto';
+        header.forEach(elem => {
+          elem.style.opacity = '1';
+          elem.style.pointerEvents = 'auto';
+        });
       }
     });
   </script>

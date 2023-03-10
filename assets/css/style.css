@@ -7,11 +7,11 @@
 }
 
 html, body {
-    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
     background: #0E0E0EFF;
     scroll-behavior: smooth;
+    font-family: 'Saira Condensed', sans-serif;
 }
 
 .container {
@@ -20,18 +20,23 @@ html, body {
 }
 
 .main-content-box {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10vh 25vh 0 25vh;
     border-radius: 10px;
-    background: #232323;
+    background: rgb(81, 81, 81);
+    background: linear-gradient(180deg, rgb(78, 78, 78) 50%, rgb(54, 54, 54) 50%);
+    border-width:7px;
+    border-style:ridge;
+    border-color: #ffffff;
 }
 
 /* HEADER */
 
 header {
+    font-family: 'Signika', sans-serif;
     position: fixed;
     display: flex;
     align-items: center;
@@ -97,12 +102,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     white-space: nowrap;
-    margin-top: 3vh;
     padding: 16px 32px;
-    height: 100px;
+    height: 10vh;
     background: #070707;
+    color: #ffffff;
 }
 
 /* CONTACT FORM */
@@ -110,12 +115,19 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15vh 25vh 10vh 25vh;
+    margin: 10vw 25vh 10vw 25vh;
     padding: 50px;
     border-radius: 10px;
-    background: #232323;
+    background: rgb(81, 81, 81);
+    background: linear-gradient(180deg, rgb(78, 78, 78) 50%, rgb(54, 54, 54) 50%);
+    border-width:7px;
+    border-style:ridge;
+    border-color: #ffffff;
     height: fit-content;
+    width: fit-content;
     color: #ffffff;
+    overflow: hidden;
+
 }
 
 .form-box h1 {
@@ -130,6 +142,7 @@ footer {
     font-size: 32px;
     font-weight: 500;
     color: #ffffff;
+    text-align: center;
 }
 
 .form-box input {
@@ -156,8 +169,114 @@ footer {
     padding: 0 20px;
     font-size: 1.5rem;
     font-weight: 600;
+    color: #2d2d2d;
+    background: #ffffff;
+}
+
+/* cards */
+
+.search-content-box {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin: 50px auto
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: fit-content;
+    margin : 10px;
+    padding: 10px;
+    backdrop-filter: blur(7px) saturate(180%);
+    -webkit-backdrop-filter: blur(7px) saturate(180%);
+    background-color: rgba(208, 208, 208, 0.13);
+    border-radius: 12px;
     color: #ffffff;
-    background: #313131;
+}
+
+.title {
+    padding: 5px 5px;
+    height: 10%;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 500;
+margin-bottom: 10px;
+}
+
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* search bar */
+.label {
+    display: flex;
+    margin: 16px 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    background: #6e6e6e;
+    box-shadow: inset 3px 0 #464646;
+    color: #FFFFFF;
+}
+
+.searchbar {
+    display: flex;
+    margin: 0 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #fcfcfc;
+    box-shadow: inset 3px 0 #bfbfbf;
+    color: #FFFFFF;
+}
+
+.submit {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin: 16px 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #CE2211;
+    box-shadow: inset 3px 0  #900b00;
+    color: #FFFFFF;
+    font-weight: 600;
+font-size: 1.5rem;
+}
+
+.form-container {
+    display: flex;
+flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+}
+
+label[for="types"] {
+    display: inline-flex;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-weight: 600;
 }
 
 /* SCROLL BAR */
