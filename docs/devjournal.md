@@ -56,6 +56,16 @@ Evening :
 
 Overall not much done, I do undestand things better gradually however, will read more of the API documentation before stopping.
 
+### 2023-03-10
+Morning :
+- progressed on the basic design and layout of the website, needed elements are starting to have their place
+
+Afternoon :
+- stylized things such as the search bar, inputs...
+
+
+Once I make everything work properly with the queries and such, and the front-end is responsive, I will start linking everything together, possibly merge the two "playground" branches.
+
 
 ## TIME TRACKED
 Approximations of time spent on the project each day (usually tracked)
@@ -65,3 +75,4 @@ Approximations of time spent on the project each day (usually tracked)
 | 2023-03-07 | A bit more than 8 hours |
 | 2023-03-08 | A bit more than 3 hours |
 | 2023-03-09 | Around 5 hours |
+| 2023-03-09 | Around 4 hours |
