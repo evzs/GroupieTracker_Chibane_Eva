@@ -11,48 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header id="navigation">
-    <div class="logo scrolldis">
-    <img src="../assets/img/logo.svg" alt="logo" style="height: 32px;">
-    </div>
-    <nav class="nav-bar">
-        <a class="nav-item" href="#">About</a>
-        <a class="nav-item" href="search.html">Search</a>
-        <a class="nav-item" href="contact.html">Contact</a>
-    </nav>
-    <div class="button scrolldis">
-        <a class="btn">
-        BUTTON
-    </a>
-        <a class="btn">
-            BUTTON
-        </a></div>
-</header>
-<div class="container">
-    <div class="main-content-box">
-juste pr voir
+<div id="nav-vertical">
+    <div id="nav-content">
+        <div id="nav-logo">
+<img src="../assets/img/logo.svg" alt="logo" style="height:88px; width:auto">
+        </div>
+        <div id="nav-menu">
+            <div class="nav-item onpage">
+                <a href="#">   <img src="../assets/img/home.svg" alt="home" style="height: 44px; width:auto;">
+               HOME</a>
+            </div>
+            <div id="search">SEARCH</div>
+            <div class="nav-item">
+                <a href="pokesearch.html">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+                POKEMON</a>
+            </div>
+            <div class="nav-item">
+                <a href="setsearch.html">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+               SETS</a>
+            </div>
+                <div class="nav-item">
+                    <a href="typesearch.html">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+                   TYPES</a>
+                </div>
     </div>
 </div>
-    <footer>
-        <div class="footer-content">nothing to see here</div>
-    </footer>
-
-<script>
-    const header = document.querySelectorAll(".scrolldis");
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
-            header.forEach(elem => {
-                elem.style.opacity = '0';
-                elem.style.pointerEvents = 'none';
-            });
-        } else {
-            header.forEach(elem => {
-                elem.style.opacity = '1';
-                elem.style.pointerEvents = 'auto';
-            });
-        }
-    });
-
-</script>
 </body>
 </html>
