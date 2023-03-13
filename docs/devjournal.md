@@ -66,6 +66,15 @@ Afternoon :
 
 Once I make everything work properly with the queries and such, and the front-end is responsive, I will start linking everything together, possibly merge the two "playground" branches.
 
+### 2023-03-13
+Morning :
+-
+After the decision to restart the front design from scratch, I got started in class, what I worked on:
+- logo and icons
+- colors used
+- navigation bar
+- cards display
+
 
 ## TIME TRACKED
 Approximations of time spent on the project each day (usually tracked)
