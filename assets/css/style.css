@@ -13,7 +13,12 @@ html, body {
     background: radial-gradient(circle, rgba(7,5,14,1) 0%, rgba(10,8,21,1) 35%, rgba(14,11,28,1) 100%);
     background-attachment: fixed;
     scroll-behavior: smooth;
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: 'Signika', sans-serif;
+}
+
+.main {
+    min-height: 100vh;
+    margin-left: 25vh;
 }
 
 /* NAVBAR */
@@ -23,17 +28,14 @@ html, body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    height: 98vh;
-    bottom: 1vh;
-    left: 1vh;
-    top : 1vh;
-    padding: 1rem;
+    margin: 25px 5px 0 5px;
+    height: 750px;
+    padding: 5px 15px 5px 15px;
     backdrop-filter: blur(10px) saturate(200%);
     -webkit-backdrop-filter: blur(10px) saturate(200%);
     background-color: #231b47;
     border-radius: 12px;
     overflow: hidden;
-    z-index: 50;
 }
 
 #nav-content {
@@ -111,7 +113,6 @@ a img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 1vh 0 0 25vh;
 }
 
 .card {
@@ -137,21 +138,52 @@ a img {
     align-self: flex-start;
 }
 
-.text {
+.typetag {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 300;
     margin-bottom: 10px;
     align-self: flex-start;
     background: #16dba0;
-    padding: 2px 8px 2px 8px;
+    padding: 1px 8px 4px 8px;
     border-radius: 8px;
 }
-
 
 .card img {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
+}
+
+.expansion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: fit-content;
+    margin : 10px;
+    padding: 10px;
+    backdrop-filter: blur(7px) saturate(180%);
+    -webkit-backdrop-filter: blur(7px) saturate(180%);
+    background-color: rgba(35, 27, 71, 0.5);
+    border-radius: 12px;
+    color: #ffffff;
+    gap: 8px;
+}
+
+.set-image img {
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.set-minimg {
+    display: flex;
+    align-self: flex-end;
+}
+
+.set-minimg img {
+    height: 32px;
+    width: auto;
+
 }
 
 /* search */
@@ -161,7 +193,6 @@ a img {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 0 0 0 25vh;
 }
 
 form {
@@ -217,12 +248,19 @@ form {
 }
 
 /* footer */
+
 footer {
-    margin-top: 32px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 300;
+    justify-content: space-around;
     height: 64px;
+ position: relative;
+    z-index: 1;
+    color: #FFFFFF;
     background: #16dba0;
-    z-index: 100;
+    width: 100%;
 }
 
 /* SCROLL BAR */
