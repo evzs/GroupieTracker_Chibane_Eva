@@ -14,8 +14,15 @@ func main() {
 
 	c := tcg.NewClient("82a5348e-9d27-4af9-9d49-3886047cae6d")
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/index", func(w http.ResponseWriter, r *http.Request) {
+		err := tmpl.Execute(w, nil)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
+			return
+		}
+	})
 
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		name := r.URL.Query().Get("name")
 		setName := r.URL.Query().Get("set-name")
 		cardType := r.URL.Query().Get("types")
@@ -61,5 +68,4 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error starting HTTP server: %s", err.Error())
 	}
-
 }
