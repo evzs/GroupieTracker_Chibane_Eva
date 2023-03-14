@@ -75,6 +75,11 @@ After the decision to restart the front design from scratch, I got started in cl
 - navigation bar
 - cards display
 
+Afternoon :
+- finalized the brand design
+- laid out more things such as the footer
+- decided on having different pages for each type of search to fill the navbar a bit
+
 
 ## TIME TRACKED
 Approximations of time spent on the project each day (usually tracked)
