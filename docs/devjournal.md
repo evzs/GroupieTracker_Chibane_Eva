@@ -80,6 +80,15 @@ Afternoon :
 - laid out more things such as the footer
 - decided on having different pages for each type of search to fill the navbar a bit
 
+### 2023-03-14
+Morning :
+- preshot the handling of routes that I will focus on later, before going to class
+
+Afternoon and evening:
+- finished up the footer
+- progressed in the responsive: handling the navbars, the sizes...
+- cleaned up the code slightly, will complete that later, putting this here as a reminder
+
 
 ## TIME TRACKED
 Approximations of time spent on the project each day (usually tracked)
@@ -91,3 +100,4 @@ Approximations of time spent on the project each day (usually tracked)
 | 2023-03-09 | Around 5 hours |
 | 2023-03-10 | Around 4 hours |
 | 2023-03-13 | Around 5 hours |
+| 2023-03-14 | Around 5 hours |
