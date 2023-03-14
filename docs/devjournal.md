@@ -89,4 +89,5 @@ Approximations of time spent on the project each day (usually tracked)
 | 2023-03-07 | A bit more than 8 hours |
 | 2023-03-08 | A bit more than 3 hours |
 | 2023-03-09 | Around 5 hours |
-| 2023-03-09 | Around 4 hours |
+| 2023-03-10 | Around 4 hours |
+| 2023-03-13 | Around 5 hours |
