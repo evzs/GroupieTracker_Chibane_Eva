@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PokeTracker</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+<div class="card">
+    <div class="title"><h1>{{.Name}}</h1></div>
+    <img src="{{.Images.Small}}" alt="{{.Name}}">
+    <div class="details">
+        <div class="tag">types:</div>
+        <div class="detail">{{range .Types}}{{.}} {{end}}</div>
+        <div class="tag">set:</div>
+        <div class="detail"> {{.Set.Name}}</div>
+        <div class="tag">rarity:</div>
+        <div class="detail">{{.Rarity}}</div>
+        <div class="tag">hp:</div>
+        <div class="detail"> {{.Hp}}</div>
+    </div>
+
+</div>
+</div>
+<a href="/index">Back to search</a>
+</body>
+</html>

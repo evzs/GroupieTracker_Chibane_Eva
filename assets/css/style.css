@@ -1,5 +1,60 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    font-weight: 600;
+    background: rgb(7,5,14);
+    background: radial-gradient(circle, rgba(7,5,14,1) 0%, rgba(10,8,21,1) 35%, rgba(14,11,28,1) 100%);
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    font-family: 'Signika', sans-serif;
+}
+
+.main {
+    min-height: 100vh;
+    margin-left: 25vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: fit-content;
+    margin : 10px;
+    padding: 10px;
+    backdrop-filter: blur(7px) saturate(180%);
+    -webkit-backdrop-filter: blur(7px) saturate(180%);
+    background-color: rgba(35, 27, 71, 0.5);
+    border-radius: 12px;
+    color: #ffffff;
+    gap: 8px;
+}
+
+.title {
+    font-family: 'Signika', sans-serif;
+    padding: 5px 5px;
+    height: 10%;
+    align-self: flex-start;
+}
+
+.tag {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    background: #16dba0;
+    padding: 1px 8px 4px 8px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
 }

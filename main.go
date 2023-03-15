@@ -11,11 +11,35 @@ import (
 
 func main() {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
+	cardDetailsTmpl := template.Must(template.ParseFiles("templates/card-details.html"))
 
 	c := tcg.NewClient("82a5348e-9d27-4af9-9d49-3886047cae6d")
 
+	static := http.FileServer(http.Dir("assets"))
+	http.Handle("/assets/", http.StripPrefix("/assets/", static))
+
 	http.HandleFunc("/index", func(w http.ResponseWriter, r *http.Request) {
 		err := tmpl.Execute(w, nil)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
+			return
+		}
+	})
+	http.HandleFunc("/card-details", func(w http.ResponseWriter, r *http.Request) {
+		id := r.URL.Query().Get("id")
+
+		if id == "" {
+			http.Error(w, "Missing card ID", http.StatusBadRequest)
+			return
+		}
+
+		card, err := c.GetCardByID(id)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("Error fetching card details from API: %s", err.Error()), http.StatusInternalServerError)
+			return
+		}
+
+		err = cardDetailsTmpl.Execute(w, card)
 		if err != nil {
 			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
 			return
@@ -44,7 +68,7 @@ func main() {
 
 		cards, err := c.GetCards(
 			request.Query(query),
-			request.PageSize(7),
+			request.PageSize(250),
 		)
 
 		if err != nil {

@@ -1,107 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PokeTracker</title>
+    <title>Pokemon Cards</title>
 </head>
 <body>
-
-
-
-<form method="GET" action="/search">
-    <label for="name">Name :</label>
-    <input type="text" id="name" name="name">
-    <br>
-    <label for="set_name">Set Name :</label>
-    <input type="text" id="set-name" name="set-name">
-    <br>
-    <input type="checkbox" id="types" name="types" value="Colorless">
-    <label for="types">Colorless</label>
-
-    <input type="checkbox" id="types" name="types" value="Darkness">
-    <label for="types">Darkness</label>
-
-    <input type="checkbox" id="types" name="types" value="Dragon">
-    <label for="types">Dragon</label>
-
-    <input type="checkbox" id="types" name="types" value="Fairy">
-    <label for="types">Fairy</label>
-
-    <input type="checkbox" id="types" name="types" value="Fighting">
-    <label for="types">Fighting</label>
-
-    <input type="checkbox" id="types" name="types" value="Fire">
-    <label for="types">Fire</label>
-
-    <input type="checkbox" id="types" name="types" value="Grass">
-    <label for="types">Grass</label>
-
-    <input type="checkbox" id="types" name="types" value="Lightning">
-    <label for="types">Lightning</label>
-
-    <input type="checkbox" id="types" name="types" value="Metal">
-    <label for="types">Metal</label>
-
-    <input type="checkbox" id="types" name="types" value="Psychic">
-    <label for="types">Psychic</label>
-
-    <input type="checkbox" id="types" name="types" value="Water">
-    <label for="types">Water</label>
-    <br>
-    <input type="submit" value="Search">
+<form action="/" method="get">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <label for="set-name">Set Name:</label>
+    <input type="text" name="set-name" id="set-name">
+    <label for="types">Type:</label>
+    <input type="text" name="types" id="types">
+    <button type="submit">Search</button>
 </form>
-
-{{ if . }} {{ range . }}
-
-<h1>{{ .Name }}</h1>
-<img src="{{ .Images.Small }}" alt="{{ .Name }}">
-<p>ID: {{ .ID }}</p>
-<p>Type: {{ .Types }}</p>
-<p>Supertype: {{ .Supertype }}</p>
-<p>Subtypes: {{ range .Subtypes }}{{ . }} {{ end }}</p>
-<p>HP: {{ .Hp }}</p>
-<p>Evolves From: {{ .EvolvesFrom }}</p>
-<p>Evolves To: {{ .EvolvesTo }}</p>
-<h2>Abilities</h2>
-{{ range .Abilities }}
-
-<p>{{ .Name }} ({{ .Type }}) - {{ .Text }}</p>
-{{ end }}
-
-
-<h2>Attacks</h2>
-{{ range .Attacks }}
-
-<p>{{ .Name }} ({{ .Cost }}) - {{ .Text }} - {{ .Damage }}</p>
-{{ end }}
-
-
-<h2>Weaknesses</h2>
-{{ range .Weaknesses }}
-
-<p>{{ .Type }} - {{ .Value }}</p>
-{{ end }}
-
-
-<h2>Resistances</h2>
-{{ range .Resistances }}
-
-<p>{{ .Type }} - {{ .Value }}</p>
-{{ end }}
-
-
-<h2>Other info</h2>
-<p>Retreat Cost: {{ .RetreatCost }}</p>
-<p>Converted Retreat Cost: {{ .ConvertedRetreatCost }}</p>
-<p>Number: {{ .Number }}</p>
-<p>Artist: {{ .Artist }}</p>
-<p>Rarity: {{ .Rarity }}</p>
-<p>National Pokedex N: {{ range .NationalPokedexNumbers }}{{ . }} {{ end }}</p>
-
-<h2>Expansions</h2>
-<p>Name: {{ .Set.Name }}</p>
-<img src="{{ .Set.Images.Symbol }}" alt="{{ .Set.Name }}" style="height: 128px; width: auto;">
-<img src="{{ .Set.Images.Logo }}" alt="{{ .Set.Name }}" style="height: 128px; width: auto;">
-{{ end }} {{ end }}
+<div>
+    {{range .}}
+        <div>
+            <a href="/card-details?id={{.ID}}">
+                <img src="{{.Images.Small}}" alt="{{.Name}}">
+            </a>
+        </div>
+    {{end}}
+</div>
 </body>
 </html>
