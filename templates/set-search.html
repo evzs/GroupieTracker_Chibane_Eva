@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PokeTracker</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="nav-vertical">
+  <div id="nav-content">
+    <div id="nav-logo">
+      <img src="../assets/img/logo.svg" alt="logo" style="height:88px; width:auto">
+    </div>
+    <div id="nav-menu">
+      <div class="nav-item">
+        <a href="index.html"> <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
+          HOME</a>
+      </div>
+      <div id="search">SEARCH</div>
+      <div class="nav-item">
+        <a href="name-search.html"> <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+          POKEMON</a>
+      </div>
+      <div class="nav-item onpage">
+        <a href="#"> <img src="../assets/img/sets.svg" alt="home" style="height: 44px; width:auto;">
+          SETS</a>
+      </div>
+      <div class="nav-item">
+        <a href="type-search.html"> <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+          TYPES</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="small-nav">
+  <div id="nav-content">
+    <div id="nav-menu">
+      <div class="nav-item">
+        <a href="index.html">   <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="name-search.html">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+        </a>
+      </div>
+      <div class="nav-item onpage">
+        <a href="#">  <img src="../assets/img/sets.svg" alt="home" style="height: 44px; width:auto;">
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="type-search.html">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="papa">
+  <div class="main">
+    <div class="search-content-box">
+      <form method="GET" action="/search" class="form-container">
+        <label for="set_name" class="label">Looking for a specific expansion pack?</label>
+        <input type="text" id="set-name" name="set-name" class="searchbar">
+        <input type="submit" value="Search" class="submit">
+      </form>
+    </div>
+    <div class="row">
+      <div class="expansion glow">
+        <div class="set-minimg"><img src="https://images.pokemontcg.io/swsh7/symbol.png"></div>
+        <div class="set-image"><img src="https://images.pokemontcg.io/swsh7/logo.png"></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="footer-content">
+      <div class="footer-subcontent">
+        <div class="footer-title">API references</div>
+        <div class="footer-item"><a href="https://pokemontcg.io/">Pokémon TCG Developers</a></div>
+        <div class="footer-item"><a href="https://docs.pokemontcg.io/">Pokémon TCG API Documentation</a></div>
+        <div class="footer-item"><a href="https://github.com/PokemonTCG/pokemon-tcg-data">Pokémon TCG Data</a></div>
+        <div class="footer-item"><a href="https://github.com/PokemonTCG/pokemon-tcg-sdk-go-v2">PokemonTCG.io V2 SDK for Go</a></div>
+      </div>
+      <div class="footer-subcontent">
+        <div class="footer-title">Other references</div>
+        <div class="footer-item"><a href="https://pokemontcg.guru/">Pokémon TCG Guru</a></div>
+        <div class="footer-item"><a href="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/">Trading Card Database</a></div>
+      </div>
+      <div class="footer-subcontent">
+        <div class="footer-title">About me</div>
+        <div class="footer-item"><a href="https://www.linkedin.com/in/eva-chibane-75039b257/">LinkedIn</a></div>
+        <div class="footer-item"><a href="https://github.com/evzs">GitHub</a></div>
+        <div class="footer-item">Contact</div>
+      </div>
+      <div id="footer-logo">
+        <img src="../assets/img/footerlogo.svg" alt="logo" style="height:48px; width:auto">
+        Copyright © 2023. This website is not produced, endorsed, supported, or affiliated with Nintendo or The Pokémon Company.
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

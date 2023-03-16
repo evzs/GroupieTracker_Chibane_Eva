@@ -18,20 +18,20 @@
     </div>
     <div id="nav-menu">
       <div class="nav-item">
-        <a href="index.html"> <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="index.html">  <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
           HOME</a>
       </div>
       <div id="search">SEARCH</div>
-      <div class="nav-item">
-        <a href="pokesearch.html"> <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+      <div class="nav-item onpage">
+        <a href="#"> <img src="../assets/img/ditto.svg" alt="home" style="height: 44px; width:auto;">
           POKEMON</a>
       </div>
-      <div class="nav-item onpage">
-        <a href="#"> <img src="../assets/img/sets.svg" alt="home" style="height: 44px; width:auto;">
+      <div class="nav-item">
+        <a href="set-search.html"><img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
           SETS</a>
       </div>
       <div class="nav-item">
-        <a href="typesearch.html"> <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="type-search.html"> <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
           TYPES</a>
       </div>
     </div>
@@ -44,16 +44,16 @@
         <a href="index.html">   <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
         </a>
       </div>
-      <div class="nav-item">
-        <a href="pokesearch.html">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
-        </a>
-      </div>
       <div class="nav-item onpage">
-        <a href="#">  <img src="../assets/img/sets.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="#">  <img src="../assets/img/ditto.svg" alt="home" style="height: 44px; width:auto;">
         </a>
       </div>
       <div class="nav-item">
-        <a href="typesearch.html">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="set-search.html">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="type-search.html">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
         </a>
       </div>
     </div>
@@ -63,15 +63,20 @@
   <div class="main">
     <div class="search-content-box">
       <form method="GET" action="/search" class="form-container">
-        <label for="set_name" class="label">Looking for a specific expansion pack?</label>
-        <input type="text" id="set-name" name="set-name" class="searchbar">
+        <label for="name" class="label">Whose cards are you looking for?</label>
+        <input type="text" id="name" name="name" class="searchbar">
         <input type="submit" value="Search" class="submit">
       </form>
     </div>
     <div class="row">
-      <div class="expansion glow">
-        <div class="set-minimg"><img src="https://images.pokemontcg.io/swsh7/symbol.png"></div>
-        <div class="set-image"><img src="https://images.pokemontcg.io/swsh7/logo.png"></div>
+      <div class="card">
+        <div class="title">
+          <h1>Pokemon Name</h1>
+        </div>
+        <div class="image"><img src="../assets/img/pikachu.jpg" alt="pikachu" class="glow"></div>
+        <div class="description">
+          <div>Description</div>
+        </div>
       </div>
     </div>
   </div>
@@ -101,7 +106,7 @@
       </div>
     </div>
   </footer>
+  <script src="../assets/js/script.js"></script>
 </div>
-<script src="../assets/js/script.js"></script>
 </body>
 </html>
