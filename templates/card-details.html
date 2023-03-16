@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+<<<<<<< .merge_file_aItcJR
 <html lang="en">
 <head>
-<<<<<<< .merge_file_GU8jC9
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -93,8 +93,50 @@
 <!-- Main content -->
 <div id="papa">
     <div class="main">
+        <div class="center">
+        <div class="detailed-card">
+            <div class="image-column">
+                <div class="column-header"><div class="big-tag">N</div><div class="big-tag">POKENAME</div></div>
+<img src="../assets/img/pikachu.jpg" alt="pikachu" style="height: 500px; width: auto; border-radius: 10px;">
+                <div class="big-tag">SUPERTYPE SUBTYPE</div>
+            </div>
+            <div class="details-column">
 
+
+                <div class="big-tag">HP<div class="value">hp</div></div>
+                <div class="big-tag">TYPE<div class="value">type</div></div>
+                <div id="combat">
+                <div class="container">
+                    <div class="sub-container">
+                        <div class="big-value">ATTACKNAME</div>
+                        <div class="value">COST</div>
+                        <div class="value">DAMAGE</div>
+
+                    </div>
+                    <div class="description">TEXT</div>
+                    <div class="sub-container">
+                        <div class="big-value">ATTACKNAME</div>
+                        <div class="value">COST</div>
+                        <div class="value">DAMAGE</div>
+
+                    </div>
+                    <div class="description">TEXT</div>
+                </div>
+                <div class="container">
+                    <div class="sub-container">
+                        <div class="value">WEAKNESSTYPE</div>
+                        <div class="value">VALUE</div>
+                    </div>
+                </div>
+                <div class="sub-container">
+                    <div class="value">RESISTANCETYPE</div>
+                    <div class="value">VALUE</div>
+                </div>
+                </div>
+            </div>
+        </div></div>
     </div>
+
 
     <!-- Footer -->
     <footer>
@@ -118,35 +160,34 @@
                 <div class="footer-item">Contact</div>
             </div>
             <div id="footer-logo">
-                <img src="../assets/img/footerlogo.svg" class="ratio" "alt="logo" style="height:48px; width:auto;">
+                <img src="../assets/img/footerlogo.svg" class="ratio" alt="logo" style="height:48px; width:auto;">
                 Copyright © 2023. This website is not produced, endorsed, supported, or affiliated with Nintendo or The Pokémon Company.
             </div>
         </div>
     </footer>
     <!-- Footer -->
 </div>
-<form action="/" method="get">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-    <label for="set-name">Set Name:</label>
-    <input type="text" name="set-name" id="set-name">
-    <label for="types">Type:</label>
-    <input type="text" name="types" id="types">
-    <button type="submit">Search</button>
-</form>
-<div>
-    {{range .}}
-        <div>
-            <a href="/card-details?id={{.ID}}">
-                <img src="{{.Images.Small}}" alt="{{.Name}}">
-            </a>
-        </div>
-    {{end}}
-</div>
 <!-- Main content -->
 
 <script src="../assets/js/script.js"></script>
+=======
+<div class="main">
+<div class="card">
+    <div class="title"><h1>{{.Name}}</h1></div>
+    <img src="{{.Images.Small}}" alt="{{.Name}}">
+    <div class="details">
+        <div class="tag">types:</div>
+        <div class="detail">{{range .Types}}{{.}} {{end}}</div>
+        <div class="tag">set:</div>
+        <div class="detail"> {{.Set.Name}}</div>
+        <div class="tag">rarity:</div>
+        <div class="detail">{{.Rarity}}</div>
+        <div class="tag">hp:</div>
+        <div class="detail"> {{.Hp}}</div>
+    </div>
+
+</div>
+</div>
+<a href="/index">Back to search</a>
 </body>
 </html>
-
->>>>>>> .merge_file_C4MfbP
