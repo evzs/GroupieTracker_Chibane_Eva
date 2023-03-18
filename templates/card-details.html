@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<<<<<<< .merge_file_aItcJR
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PokeTracker</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <!-- Navigation -->
 <div id="nav-vertical">
     <div id="nav-content">
@@ -45,8 +43,8 @@
 <div id="small-nav">
     <div id="nav-content">
         <div id="nav-menu">
-            <div class="nav-item onpage">
-                <a href="#">   <img src="../assets/img/home.svg" alt="home" style="height: 44px; width:auto;">
+            <div class="nav-item">
+                <a href="index.html">   <img src="../assets/img/home.svg" alt="home" style="height: 44px; width:auto;">
                 </a>
             </div>
             <div class="nav-item">
@@ -66,78 +64,86 @@
 </div>
 <!-- Navigation on mobile -->
 <div id="nav-horizontal">
-    <div id="hnav-content">
-        <div id="hnav-menu">
-            <div class="hnav-item">
+    <div id="horizontal-nav-content">
+        <div id="horizontal-nav-menu">
+            <div class="horizontal-nav-item">
                 <a href="#">Home
                 </a>
             </div>
-            <div class="hnav-item">
+            <div class="horizontal-nav-item">
                 <a href="name-search.html">Pokemons
                 </a>
             </div>
-            <div class="hnav-item">
+            <div class="horizontal-nav-item">
                 <a href="set-search.html">Expansions
                 </a>
             </div>
-            <div class="hnav-item">
+            <div class="horizontal-nav-item">
                 <a href="type-search.html">Types
                 </a>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Navigation -->
-
 <!-- Main content -->
 <div id="papa">
     <div class="main">
         <div class="center">
-        <div class="detailed-card">
-            <div class="image-column">
-                <div class="column-header"><div class="big-tag">N</div><div class="big-tag">POKENAME</div></div>
-<img src="../assets/img/pikachu.jpg" alt="pikachu" style="height: 500px; width: auto; border-radius: 10px;">
-                <div class="big-tag">SUPERTYPE SUBTYPE</div>
+            <div class="detailed-card">
+<div class="image-column">
+                    <div class="column-header">
+                        <div class="big-tag">{{.NationalPokedexNumbers}}</div>
+                        <div class="big-tag">{{.Name}}</div>
+                    </div>
+                    <img src="{{.Images.Small}}" alt="{{.Name}}" style="height: 500px; width: auto; border-radius: 10px;">
+                    <div class="big-tag">{{.Supertype}} - {{.Subtypes}}</div>
+                </div>
+                <div class="details-column">
+                    <div class="big-tag">
+                        HP
+                        <div class="value">{{.Hp}}</div>
+                    </div>
+                    <div class="big-tag">
+                        LEVEL
+                        <div class="value">{{.Level}}</div>
+                    </div>
+                    <div class="big-tag">
+                        TYPE
+                        <div class="value">{{.Types}}</div>
+                    </div>
+                    <div id="combat">
+                        <div class="container">
+                            <div class="sub-container">
+                                <div class="big-value">ATTACKNAME</div>
+                                <div class="value">COST</div>
+                                <div class="value">DAMAGE</div>
+                            </div>
+                            <div class="description">TEXT</div>
+                            <div class="sub-container">
+                                <div class="big-value">ATTACKNAME</div>
+                                <div class="value">COST</div>
+                                <div class="value">DAMAGE</div>
+                            </div>
+                            <div class="description">TEXT</div>
+                        </div>
+                        <div class="container">
+                            <div class="sub-container">
+                                <div class="value">WEAKNESSTYPE</div>
+                                <div class="value">VALUE</div>
+                            </div>
+                        </div>
+                        <div class="sub-container">
+                            <div class="value">RESISTANCETYPE</div>
+                            <div class="value">VALUE</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="details-column">
-
-
-                <div class="big-tag">HP<div class="value">hp</div></div>
-                <div class="big-tag">TYPE<div class="value">type</div></div>
-                <div id="combat">
-                <div class="container">
-                    <div class="sub-container">
-                        <div class="big-value">ATTACKNAME</div>
-                        <div class="value">COST</div>
-                        <div class="value">DAMAGE</div>
-
-                    </div>
-                    <div class="description">TEXT</div>
-                    <div class="sub-container">
-                        <div class="big-value">ATTACKNAME</div>
-                        <div class="value">COST</div>
-                        <div class="value">DAMAGE</div>
-
-                    </div>
-                    <div class="description">TEXT</div>
-                </div>
-                <div class="container">
-                    <div class="sub-container">
-                        <div class="value">WEAKNESSTYPE</div>
-                        <div class="value">VALUE</div>
-                    </div>
-                </div>
-                <div class="sub-container">
-                    <div class="value">RESISTANCETYPE</div>
-                    <div class="value">VALUE</div>
-                </div>
-                </div>
-            </div>
-        </div></div>
-    </div>
-
-
+            <div id="home"><a href="index.html">Get back to home page</a></div>
+        </div>
+</div>
+    <!-- Main content -->
     <!-- Footer -->
     <footer>
         <div id="footer-content">
@@ -167,27 +173,6 @@
     </footer>
     <!-- Footer -->
 </div>
-<!-- Main content -->
-
 <script src="../assets/js/script.js"></script>
-=======
-<div class="main">
-<div class="card">
-    <div class="title"><h1>{{.Name}}</h1></div>
-    <img src="{{.Images.Small}}" alt="{{.Name}}">
-    <div class="details">
-        <div class="tag">types:</div>
-        <div class="detail">{{range .Types}}{{.}} {{end}}</div>
-        <div class="tag">set:</div>
-        <div class="detail"> {{.Set.Name}}</div>
-        <div class="tag">rarity:</div>
-        <div class="detail">{{.Rarity}}</div>
-        <div class="tag">hp:</div>
-        <div class="detail"> {{.Hp}}</div>
-    </div>
-
-</div>
-</div>
-<a href="/index">Back to search</a>
 </body>
 </html>

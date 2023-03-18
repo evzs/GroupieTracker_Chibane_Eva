@@ -12,19 +12,23 @@ import (
 func main() {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 	cardDetailsTmpl := template.Must(template.ParseFiles("templates/card-details.html"))
+	nameSearchTmpl := template.Must(template.ParseFiles("templates/name-search.html"))
+	setSearchTmpl := template.Must(template.ParseFiles("templates/set-search.html"))
+	typeSearchTmpl := template.Must(template.ParseFiles("templates/type-search.html"))
 
 	c := tcg.NewClient("82a5348e-9d27-4af9-9d49-3886047cae6d")
 
 	static := http.FileServer(http.Dir("assets"))
 	http.Handle("/assets/", http.StripPrefix("/assets/", static))
 
-	http.HandleFunc("/index", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		err := tmpl.Execute(w, nil)
 		if err != nil {
 			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 	})
+
 	http.HandleFunc("/card-details", func(w http.ResponseWriter, r *http.Request) {
 		id := r.URL.Query().Get("id")
 
@@ -46,45 +50,70 @@ func main() {
 		}
 	})
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/name-search", func(w http.ResponseWriter, r *http.Request) {
 		name := r.URL.Query().Get("name")
-		setName := r.URL.Query().Get("set-name")
-		cardType := r.URL.Query().Get("types")
-
 		var query string
-		if name != "" && setName != "" && cardType != "" {
-			query = fmt.Sprintf("name:\"%s\" set.name:\"%s\" types:\"%s\"", name, setName, cardType)
-		} else if name != "" && cardType != "" {
-			query = fmt.Sprintf("name:\"%s\" types:\"%s\"", name, cardType)
-		} else if setName != "" && cardType != "" {
-			query = fmt.Sprintf("set.name:\"%s\" types:\"%s\"", setName, cardType)
-		} else if name != "" {
-			query = fmt.Sprintf("name:\"%s\"", name)
-		} else if setName != "" {
-			query = fmt.Sprintf("set.name:\"%s\"", setName)
-		} else if cardType != "" {
-			query = fmt.Sprintf("types:\"%s\"", cardType)
+		if name != "" {
+			query = fmt.Sprintf("name:%s", name)
 		}
 
 		cards, err := c.GetCards(
 			request.Query(query),
 			request.PageSize(250),
 		)
-
 		if err != nil {
-			http.Error(w, fmt.Sprintf("Error fetching data from API: %s", err.Error()), http.StatusInternalServerError)
-			return
-		}
+			log.Fatalf("Error getting cards: %s", err.Error())
 
-		err = tmpl.Execute(w, cards)
+		}
+		err = nameSearchTmpl.Execute(w, cards)
 		if err != nil {
 			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
+	})
 
-		fmt.Println(query)
-		for _, card := range cards {
-			fmt.Println(card.Name)
+	http.HandleFunc("/set-search", func(w http.ResponseWriter, r *http.Request) {
+		setName := r.URL.Query().Get("set-name")
+
+		var query string
+		if setName != "" {
+			query = fmt.Sprintf("set.name:%s", setName)
+		}
+
+		sets, err := c.GetSets(
+			request.Query(query),
+			request.PageSize(100),
+		)
+		if err != nil {
+			log.Fatalf("Error getting sets: %s", err.Error())
+		}
+
+		err = setSearchTmpl.Execute(w, sets)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
+			return
+		}
+	})
+
+	http.HandleFunc("/type-search", func(w http.ResponseWriter, r *http.Request) {
+		types := r.URL.Query().Get("type")
+		var query string
+		if types != "" {
+			query = fmt.Sprintf("types:%s", types)
+		}
+
+		cards, err := c.GetCards(
+			request.Query(query),
+			request.PageSize(250),
+		)
+		if err != nil {
+			log.Fatalf("Error getting cards: %s", err.Error())
+
+		}
+		err = typeSearchTmpl.Execute(w, cards)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("Error executing template: %s", err.Error()), http.StatusInternalServerError)
+			return
 		}
 	})
 

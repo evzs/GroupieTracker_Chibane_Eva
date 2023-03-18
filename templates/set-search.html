@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PokeTracker</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Navigation -->
 <div id="nav-vertical">
   <div id="nav-content">
     <div id="nav-logo">
@@ -37,6 +38,7 @@
     </div>
   </div>
 </div>
+<!-- Navigation when scrolled -->
 <div id="small-nav">
   <div id="nav-content">
     <div id="nav-menu">
@@ -59,22 +61,47 @@
     </div>
   </div>
 </div>
-<div id="papa">
-  <div class="main">
-    <div class="search-content-box">
-      <form method="GET" action="/search" class="form-container">
-        <label for="set_name" class="label">Looking for a specific expansion pack?</label>
-        <input type="text" id="set-name" name="set-name" class="searchbar">
-        <input type="submit" value="Search" class="submit">
-      </form>
-    </div>
-    <div class="row">
-      <div class="expansion glow">
-        <div class="set-minimg"><img src="https://images.pokemontcg.io/swsh7/symbol.png"></div>
-        <div class="set-image"><img src="https://images.pokemontcg.io/swsh7/logo.png"></div>
+<!-- Navigation on mobile -->
+<div id="nav-horizontal">
+  <div id="horizontal-nav-content">
+    <div id="horizontal-nav-menu">
+      <div class="horizontal-nav-item">
+        <a href="#">Home
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="name-search.html">Pokemons
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="set-search.html">Expansions
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="type-search.html">Types
+        </a>
       </div>
     </div>
   </div>
+</div>
+<!-- Navigation -->
+<!-- Main content -->
+<div id="papa">
+  <div class="main">
+    <div class="row">
+      {{ range . }}
+      <div class="expansion glow">
+
+        <div class="set-minimg"> <img src="{{ .Images.Symbol }}" alt="{{ .Name }} Symbol" style="height: 16px; width: auto;"></div>
+        <div class="set-image">  <img src="{{ .Images.Logo }}" alt="{{ .Name }} Logo" style="height: 64px; width: auto;"></div>
+        <div class="set-name">{{ .Name }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <!-- Footer -->
   <footer>
     <div id="footer-content">
       <div class="footer-subcontent">
@@ -96,11 +123,12 @@
         <div class="footer-item">Contact</div>
       </div>
       <div id="footer-logo">
-        <img src="../assets/img/footerlogo.svg" alt="logo" style="height:48px; width:auto">
+        <img src="../assets/img/footerlogo.svg" class="ratio" alt="logo" style="height:48px; width:auto;">
         Copyright © 2023. This website is not produced, endorsed, supported, or affiliated with Nintendo or The Pokémon Company.
       </div>
     </div>
   </footer>
+  <!-- Footer -->
 </div>
 <script src="../assets/js/script.js"></script>
 </body>

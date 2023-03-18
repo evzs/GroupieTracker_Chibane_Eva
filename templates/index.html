@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< .merge_file_GU8jC9
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PokeTracker</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <!-- Navigation -->
 <div id="nav-vertical">
     <div id="nav-content">
@@ -27,15 +25,15 @@
             </div>
             <div id="search">SEARCH</div>
             <div class="nav-item">
-                <a href="name-search.html">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
                     POKEMON</a>
             </div>
             <div class="nav-item">
-                <a href="set-search.html">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/set-search">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
                     SETS</a>
             </div>
             <div class="nav-item">
-                <a href="type-search.html">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/type-search">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
                     TYPES</a>
             </div>
         </div>
@@ -50,15 +48,15 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a href="name-search.html">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+                    POKEMON</a>
+            </div>
+            <div class="nav-item">
+                <a href="/set-search">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
                 </a>
             </div>
             <div class="nav-item">
-                <a href="set-search.html">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="type-search.html">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/type-search">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
                 </a>
             </div>
         </div>
@@ -66,36 +64,33 @@
 </div>
 <!-- Navigation on mobile -->
 <div id="nav-horizontal">
-    <div id="hnav-content">
-        <div id="hnav-menu">
-            <div class="hnav-item">
+    <div id="horizontal-nav-content">
+        <div id="horizontal-nav-menu">
+            <div class="horizontal-nav-item">
                 <a href="#">Home
                 </a>
             </div>
-            <div class="hnav-item">
-                <a href="name-search.html">Pokemons
+            <div class="horizontal-nav-item">
+                <a href="/name-search">Pokemons
                 </a>
             </div>
-            <div class="hnav-item">
-                <a href="set-search.html">Expansions
+            <div class="horizontal-nav-item">
+                <a href="/set-search">Expansions
                 </a>
             </div>
-            <div class="hnav-item">
-                <a href="type-search.html">Types
+            <div class="horizontal-nav-item">
+                <a href="/type-search">Types
                 </a>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Navigation -->
-
 <!-- Main content -->
 <div id="papa">
     <div class="main">
-
     </div>
-
+    <!-- Main content -->
     <!-- Footer -->
     <footer>
         <div id="footer-content">
@@ -118,35 +113,13 @@
                 <div class="footer-item">Contact</div>
             </div>
             <div id="footer-logo">
-                <img src="../assets/img/footerlogo.svg" class="ratio" "alt="logo" style="height:48px; width:auto;">
+                <img src="../assets/img/footerlogo.svg" class="ratio" alt="logo" style="height:48px; width:auto;">
                 Copyright © 2023. This website is not produced, endorsed, supported, or affiliated with Nintendo or The Pokémon Company.
             </div>
         </div>
     </footer>
     <!-- Footer -->
 </div>
-<form action="/" method="get">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-    <label for="set-name">Set Name:</label>
-    <input type="text" name="set-name" id="set-name">
-    <label for="types">Type:</label>
-    <input type="text" name="types" id="types">
-    <button type="submit">Search</button>
-</form>
-<div>
-    {{range .}}
-        <div>
-            <a href="/card-details?id={{.ID}}">
-                <img src="{{.Images.Small}}" alt="{{.Name}}">
-            </a>
-        </div>
-    {{end}}
-</div>
-<!-- Main content -->
-
 <script src="../assets/js/script.js"></script>
 </body>
 </html>
-
->>>>>>> .merge_file_C4MfbP

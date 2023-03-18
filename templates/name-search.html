@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Navigation -->
 <div id="nav-vertical">
   <div id="nav-content">
     <div id="nav-logo">
@@ -59,27 +60,59 @@
     </div>
   </div>
 </div>
-<div id="papa">
-  <div class="main">
-    <div class="search-content-box">
-      <form method="GET" action="/search" class="form-container">
-        <label for="name" class="label">Whose cards are you looking for?</label>
-        <input type="text" id="name" name="name" class="searchbar">
-        <input type="submit" value="Search" class="submit">
-      </form>
-    </div>
-    <div class="row">
-      <div class="card">
-        <div class="title">
-          <h1>Pokemon Name</h1>
-        </div>
-        <div class="image"><img src="../assets/img/pikachu.jpg" alt="pikachu" class="glow"></div>
-        <div class="description">
-          <div>Description</div>
-        </div>
+<!-- Navigation on mobile -->
+<div id="nav-horizontal">
+  <div id="horizontal-nav-content">
+    <div id="horizontal-nav-menu">
+      <div class="horizontal-nav-item">
+        <a href="#">Home
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="name-search.html">Pokemons
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="set-search.html">Expansions
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="type-search.html">Types
+        </a>
       </div>
     </div>
   </div>
+</div>
+<!-- Navigation -->
+<div id="papa">
+  <!-- Main content -->
+  <div class="main">
+    <div class="search-content-box">
+      <form action="/name-search" method="get" class="form-container">
+        <label for="name" class="label">Whose cards are you looking for?</label>
+        <input type="text" id="name" name="name" class="searchbar">
+        <button type="submit" value="Search" class="submit">Search</button>
+      </form>
+
+    </div>
+  <div class="row">
+    {{range .}}
+    <div class="card">
+        <div class="title">
+
+          {{.Name}}
+        </div>
+        <div class="image">  <a href="/card-details?id={{.ID}}"><img src="{{.Images.Small}}" alt="{{.Name}}" class="glow">       </a></div>
+        <div class="description">
+          <div>ratio</div>
+        </div>
+      </div>
+    {{end}}
+    </div>
+
+  </div>
+  <!-- Main content -->
+  <!-- Footer -->
   <footer>
     <div id="footer-content">
       <div class="footer-subcontent">
@@ -101,12 +134,14 @@
         <div class="footer-item">Contact</div>
       </div>
       <div id="footer-logo">
-        <img src="../assets/img/footerlogo.svg" alt="logo" style="height:48px; width:auto">
+        <img src="../assets/img/footerlogo.svg" class="ratio" alt="logo" style="height:48px; width:auto;">
         Copyright © 2023. This website is not produced, endorsed, supported, or affiliated with Nintendo or The Pokémon Company.
       </div>
     </div>
   </footer>
-  <script src="../assets/js/script.js"></script>
+  <!-- Footer -->
+
 </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
