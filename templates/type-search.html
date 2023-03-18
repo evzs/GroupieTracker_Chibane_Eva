@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Navigation -->
 <div id="nav-vertical">
   <div id="nav-content">
     <div id="nav-logo">
@@ -37,6 +38,7 @@
     </div>
   </div>
 </div>
+<!-- Navigation when scrolled -->
 <div id="small-nav">
   <div id="nav-content">
     <div id="nav-menu">
@@ -59,8 +61,63 @@
     </div>
   </div>
 </div>
+<!-- Navigation on mobile -->
+<div id="nav-horizontal">
+  <div id="horizontal-nav-content">
+    <div id="horizontal-nav-menu">
+      <div class="horizontal-nav-item">
+        <a href="index.html">Home
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="name-search.html">Pokemons
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="set-search.html">Expansions
+        </a>
+      </div>
+      <div class="horizontal-nav-item">
+        <a href="#">Types
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Navigation -->
+<!-- Main content -->
 <div id="papa">
-  <div class="main"></div>
+  <div class="main">
+    <div class="type-box">
+      <form method="GET" action="/search">
+        <input type="checkbox" id="colorless" name="types" value="Colorless" class="checkbox">
+        <label for="colorless">Colorless</label>
+        <input type="checkbox" id="darkness" name="types" value="Darkness" class="checkbox">
+        <label for="darkness">Darkness</label>
+        <input type="checkbox" id="dragon" name="types" value="Dragon" class="checkbox">
+        <label for="dragon">Dragon</label>
+        <input type="checkbox" id="fairy" name="types" value="Fairy" class="checkbox">
+        <label for="fairy">Fairy</label>
+        <input type="checkbox" id="fighting" name="types" value="Fighting" class="checkbox">
+        <label for="fighting">Fighting</label>
+        <input type="checkbox" id="fire" name="types" value="Fire" class="checkbox">
+        <label for="fire">Fire</label>
+        <input type="checkbox" id="grass" name="types" value="Grass" class="checkbox">
+        <label for="grass">Grass</label>
+        <input type="checkbox" id="lightning" name="types" value="Lightning" class="checkbox">
+        <label for="lightning">Lightning</label>
+        <input type="checkbox" id="metal" name="types" value="Metal" class="checkbox">
+        <label for="metal">Metal</label>
+        <input type="checkbox" id="psychic" name="psychic" value="Psychic" class="checkbox">
+        <label for="psychic">Psychic</label>
+        <input type="checkbox" id="water" name="types" value="Water" class="checkbox">
+        <label for="water">Water</label>
+        <input type="submit" value="Search" class="submit">
+      </form>
+    </div>
+  </div>
+  <!-- Main content -->
+  <!-- Footer -->
   <footer>
     <div id="footer-content">
       <div class="footer-subcontent">
@@ -82,11 +139,12 @@
         <div class="footer-item">Contact</div>
       </div>
       <div id="footer-logo">
-        <img src="../assets/img/footerlogo.svg" alt="logo" style="height:48px; width:auto">
+        <img src="../assets/img/footerlogo.svg" class="ratio" alt="logo" style="height:48px; width:auto;">
         Copyright © 2023. This website is not produced, endorsed, supported, or affiliated with Nintendo or The Pokémon Company.
       </div>
     </div>
   </footer>
+  <!-- Footer -->
 </div>
 <script src="../assets/js/script.js"></script>
 </body>
