@@ -89,8 +89,20 @@ Afternoon and evening:
 - progressed in the responsive: handling the navbars, the sizes...
 - cleaned up the code slightly, will complete that later, putting this here as a reminder
 
-### 2023-03-14
+### 2023-03-15
 Evening :
+
+### 2023-03-18
+gros gros ratio jecrirai tout bien + tard mais la jv crever
+un peu + de reponsive
+page types
+link go et tout
+separation handle
+manque filtre types
+finir de bien link les pages entre elles
+souci search query set voir si je fais comme ca ou nn (sinn quand clic dessus rediriger sur toutes les cartes du set)
+jsplus
+environ a +5h ojd pr linstant
 
 
 
