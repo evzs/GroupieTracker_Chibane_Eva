@@ -162,7 +162,7 @@ a img {
     padding: 8px;
     border-top: ridge 4px #7c70b5;
     border-bottom: ridge 4px #7c70b5;
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 @media screen and (max-width:768px) {
@@ -313,7 +313,7 @@ footer a:hover {
 }
 
 #back {
-    padding: 8px;
+    padding: 16px;
 }
 
 #back a {
@@ -324,7 +324,7 @@ footer a:hover {
     padding: 4px;
     border-radius: 8px;
     background: #16dba0;
-    border: 2px solid #16dba0;
+    border-left: #00ffb4 8px inset;
 }
 .row {
     display: flex;
@@ -348,6 +348,7 @@ footer a:hover {
     border-radius: 12px;
     color: #fff;
     gap: 8px;
+
 }
 
 .card .title {
@@ -364,6 +365,8 @@ text-overflow: ellipsis;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .expansion {
@@ -474,12 +477,15 @@ text-overflow: ellipsis;
     flex-direction: column;
     align-items: flex-start;
     padding: 8px;
+    border-right: #16dba0 2px solid;
 }
 
 .image-column img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .details-column {
@@ -487,8 +493,7 @@ text-overflow: ellipsis;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: #16dba0 2px solid;
-    padding-left: 8px;
+    padding: 8px;
     height: 100%;
     width: 300px;
 }
@@ -519,6 +524,19 @@ text-overflow: ellipsis;
     font-size: 24px;
     gap: 8px;
     white-space: nowrap;
+    color: #16dba0;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    white-space: nowrap;
+    padding: 8px;
 }
 
 .value {
@@ -529,6 +547,7 @@ text-overflow: ellipsis;
     width: 100%;
     height: 100%;
     gap: 8px;
+    color: #FFFFFF;
 }
 
 .big-value {
@@ -572,6 +591,8 @@ text-overflow: ellipsis;
     border: ridge 8px #ffffff;
     height: fit-content;
     padding: 15px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .container {
@@ -632,6 +653,7 @@ text-overflow: ellipsis;
     .image-column {
         padding: 0;
         align-items: center;
+        border: none;
     }
 
     .column-header {
@@ -656,7 +678,7 @@ text-overflow: ellipsis;
 
     .details-column {
         padding: 0;
-        border: none;
+
         align-self: center;
     }
 }
@@ -744,8 +766,10 @@ form {
     transition: all .3s ease;
     background: #16dba0;
     color: #fff;
+    border: none;
     font-weight: 600;
-    font-size: 1.5rem
+    border-left: #00ffb4 8px inset;
+    font-size: 18px;
 }
 
 .type-box form {
