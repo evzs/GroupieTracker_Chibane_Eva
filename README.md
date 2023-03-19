@@ -12,11 +12,10 @@ As most of the data is handled with a Golang server, in order to use the website
 ```
 https://github.com/evzs/GroupieTracker_Chibane_Eva.git
 ```
-- open the terminal in the project's folderroot and run the command
+- open the terminal in the src folder's root and run the following command:
 ```
 go run main.go
 ```
-<<< FOR NOW - WILL CHANGE FOLDER STRUCTURE>>>
 You should be able to view and use the website on localhost:8080 (if you need to change it I have not yet made the possibility to do so, my bad + ratio)
 
 ## To go a little further
