@@ -104,6 +104,15 @@ souci search query set voir si je fais comme ca ou nn (sinn quand clic dessus re
 jsplus
 environ a +5h ojd pr linstant
 
+### 2023-03-19
+jv crever mon petit cerveau nest pas fait pr faire autant de choses dans une journee (donnez journee sans taf)
+recherche sets fait
+filtre types aussi pretty basic tho
+stylisation boutons et page detaillee
+manque contenu page daccueil
+retaper ce journal de dev des enfers
+reorga code
+c quoi les bonnes pratiques zbi je v chialer
 
 
 ## TIME TRACKED
@@ -118,3 +127,5 @@ Approximations of time spent on the project each day (usually tracked)
 | 2023-03-13 | Around 5 hours |
 | 2023-03-14 | Around 5 hours |
 | 2023-03-15 | Around 2 hours |
+| 2023-03-18 | A bit more than 5 hours |
+| 2023-03-19 | Around 4 hours |
