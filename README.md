@@ -14,9 +14,9 @@ https://github.com/evzs/GroupieTracker_Chibane_Eva.git
 ```
 - open the terminal in the src folder's root and run the following command:
 ```
-go run main.go
+go run .
 ```
-You should be able to view and use the website on localhost:8080 (if you need to change it I have not yet made the possibility to do so, my bad + ratio)
+You should be able to view and use the website on localhost:8080.
 
 ## To go a little further
 The current queries one can do with this program only consist for now of:
