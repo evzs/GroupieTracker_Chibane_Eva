@@ -114,6 +114,7 @@ retaper ce journal de dev des enfers
 reorga code
 c quoi les bonnes pratiques zbi je v chialer
 moved folder
++ pas oublier ajouter + de description
 
 
 ## TIME TRACKED
