@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+
+	// loads the HTML templates from the files in the templates directory
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 	cardDetailsTmpl := template.Must(template.ParseFiles("templates/card-details.html"))
 	nameSearchTmpl := template.Must(template.ParseFiles("templates/name-search.html"))
@@ -17,11 +19,17 @@ func main() {
 	typeSearchTmpl := template.Must(template.ParseFiles("templates/type-search.html"))
 	setCardsTmpl := template.Must(template.ParseFiles("templates/set-cards.html"))
 
+	// API key, left there on purpose for the person correcting me, will regenerate a new one once it is done
 	c := tcg.NewClient("82a5348e-9d27-4af9-9d49-3886047cae6d")
 
+	// handles the static files in the assets directory
 	static := http.FileServer(http.Dir("assets"))
 	http.Handle("/assets/", http.StripPrefix("/assets/", static))
 
+	// handles routing and errors
+	// 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗 🠗
+
+	// index
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		err := tmpl.Execute(w, nil)
 		if err != nil {
@@ -30,6 +38,7 @@ func main() {
 		}
 	})
 
+	// handles requests to get card details from fetched id
 	http.HandleFunc("/card-details", func(w http.ResponseWriter, r *http.Request) {
 		id := r.URL.Query().Get("id")
 
@@ -51,6 +60,7 @@ func main() {
 		}
 	})
 
+	// handles search queries by name
 	http.HandleFunc("/name-search", func(w http.ResponseWriter, r *http.Request) {
 		name := r.URL.Query().Get("name")
 		var query string
@@ -73,6 +83,7 @@ func main() {
 		}
 	})
 
+	// handles search queries by expansion pack
 	http.HandleFunc("/set-search", func(w http.ResponseWriter, r *http.Request) {
 		setName := r.URL.Query().Get("set-name")
 
@@ -96,6 +107,7 @@ func main() {
 		}
 	})
 
+	// loads cards from queried expansion pack
 	http.HandleFunc("/set-cards", func(w http.ResponseWriter, r *http.Request) {
 		setCard := r.URL.Query().Get("set-name")
 
@@ -117,6 +129,7 @@ func main() {
 		}
 	})
 
+	// handles search queries by types
 	http.HandleFunc("/type-search", func(w http.ResponseWriter, r *http.Request) {
 		types := r.URL.Query().Get("types")
 		var query string
@@ -139,6 +152,7 @@ func main() {
 		}
 	})
 
+	// launches the server
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatalf("Error starting HTTP server: %s", err.Error())
