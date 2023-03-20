@@ -68,7 +68,6 @@ Once I make everything work properly with the queries and such, and the front-en
 
 ### 2023-03-13
 Morning :
--
 After the decision to restart the front design from scratch, I got started in class, what I worked on:
 - logo and icons
 - colors used
