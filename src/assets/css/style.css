@@ -1,3 +1,5 @@
+/* MAIN */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +21,19 @@ html {
     min-height: 100vh;
     margin-left: 25vh
 }
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 70px
+}
+
+/* HOME PAGE */
+
 
 .sub-content-title {
     color: #fff;
@@ -158,6 +173,8 @@ code {
     }
 }
 
+
+/* NAVIGATION */
 #nav-vertical {
     display: flex;
     flex-direction: column;
@@ -327,6 +344,7 @@ a img {
     }
 }
 
+/* FOOTER */
 footer {
     font-weight: 300;
     height: 100%;
@@ -415,6 +433,8 @@ footer a:hover {
 .glow {
     transition: all .3s ease-in-out
 }
+
+/* CARDS */
 
 .row {
     display: flex;
@@ -532,15 +552,7 @@ footer a:hover {
     }
 }
 
-.center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 70px
-}
+/* DETAILS */
 
 .detailed-card {
     display: flex;
@@ -796,6 +808,8 @@ footer a:hover {
     }
 }
 
+/* SEARCH */
+
 .search-content-box {
     display: flex;
     justify-content: center;
@@ -1001,6 +1015,8 @@ input[type=checkbox]:checked+label[for=water] {
         flex-direction: column
     }
 }
+
+/* MISC AND FEATURES */
 
 .glow:hover {
     -webkit-box-shadow: 0 0 56px 19px rgba(189, 255, 235, .08);
