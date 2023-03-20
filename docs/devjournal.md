@@ -91,31 +91,37 @@ Afternoon and evening:
 
 ### 2023-03-15
 Evening :
+- started laying out the card details page
+- handling added for it
+
+### 2023-03-16
+Afternoon :
+- finally merged most of the front with the go code
+- added more css for the card details page
+- did some responsive
 
 ### 2023-03-18
-gros gros ratio jecrirai tout bien + tard mais la jv crever
-un peu + de reponsive
-page types
-link go et tout
-separation handle
-manque filtre types
-finir de bien link les pages entre elles
-souci search query set voir si je fais comme ca ou nn (sinn quand clic dessus rediriger sur toutes les cartes du set)
-jsplus
-environ a +5h ojd pr linstant
+Afternoon/evening :
+- route handling for most of the pages added
+- changed the redirections in html to adapt to the routes
+- set up the type search page
+- did some more responsive for added features
 
 ### 2023-03-19
-jv crever mon petit cerveau nest pas fait pr faire autant de choses dans une journee (donnez journee sans taf)
-recherche sets fait
-filtre types aussi pretty basic tho
-stylisation boutons et page detaillee
-manque contenu page daccueil
-retaper ce journal de dev des enfers
-reorga code
-c quoi les bonnes pratiques zbi je v chialer
-moved folder
-+ pas oublier ajouter + de description
+Afternoon/evening :
+- search query by clicking on set image and redirecting to cards of selected set
+- types checkbox filter done, basic
+- stylized some buttons
+- card details more furnished, responsive and easy on the eye compared to before
+- changed folder structure
 
+### 2023-03-20
+- filled the homepage with API information, not done at all, could not take the time for it before turning everything in
+- still has some kind of layout, would like to appropriate it more one day, add toggles
+- checked if everything worked fine enough
+- cleaned up html and css
+- brief commenting
+- cleaned up unused elements in assets
 
 ## TIME TRACKED
 Approximations of time spent on the project each day (usually tracked)
@@ -129,5 +135,8 @@ Approximations of time spent on the project each day (usually tracked)
 | 2023-03-13 | Around 5 hours |
 | 2023-03-14 | Around 5 hours |
 | 2023-03-15 | Around 2 hours |
+| 2023-03-16 | Around 2 hours |
 | 2023-03-18 | A bit more than 5 hours |
 | 2023-03-19 | Around 4 hours |
+| 2023-03-20 | Around 4 hours |
+
