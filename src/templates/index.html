@@ -19,21 +19,21 @@
         </div>
         <div id="nav-menu">
             <div class="nav-item onpage">
-                <a href="#">   <img src="../assets/img/home.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="#">   <img src="../assets/img/home.svg" alt="pokeball-icon" style="height: 44px; width:auto;">
                     HOME
                 </a>
             </div>
             <div id="search">SEARCH</div>
             <div class="nav-item">
-                <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="ditto-icon" style="height: 44px; width:auto;">
                     POKEMON</a>
             </div>
             <div class="nav-item">
-                <a href="/set-search">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/set-search">  <img src="../assets/img/psets.svg" alt="cards-icon" style="height: 44px; width:auto;">
                     SETS</a>
             </div>
             <div class="nav-item">
-                <a href="/type-search">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/type-search">   <img src="../assets/img/ptype.svg" alt="type-icon" style="height: 44px; width:auto;">
                     TYPES</a>
             </div>
         </div>
@@ -44,19 +44,19 @@
     <div id="nav-content">
         <div id="nav-menu">
             <div class="nav-item onpage">
-                <a href="#">   <img src="../assets/img/home.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="#">   <img src="../assets/img/home.svg" alt="pokeball-icon" style="height: 44px; width:auto;">
                 </a>
             </div>
             <div class="nav-item">
-                <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="ditto-icon" style="height: 44px; width:auto;">
                     POKEMON</a>
             </div>
             <div class="nav-item">
-                <a href="/set-search">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/set-search">  <img src="../assets/img/psets.svg" alt="cards-icon" style="height: 44px; width:auto;">
                 </a>
             </div>
             <div class="nav-item">
-                <a href="/type-search">   <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+                <a href="/type-search">   <img src="../assets/img/ptype.svg" alt="type-icon" style="height: 44px; width:auto;">
                 </a>
             </div>
         </div>
@@ -89,6 +89,58 @@
 <!-- Main content -->
 <div id="papa">
     <div class="main">
+        <div class="homepage">
+            <div class="content-container">
+                <div class="sub-content-title">Introduction</div>
+                <div class="sub-content">The Pokémon TCG API is organized around REST. The API has predictable resource-oriented URLs, accepts JSON encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+                    You can use the Pokémon TCG API without registering for an API key, although your limits are far less than if you had an API key. The API key you use to authenticate the request determines your rate limits. Register for an api key at the Developer Portal.
+                </div>
+                <div class="sub-content-title">Authentication</div>
+                <div class="sub-content">The Pokémon TCG API uses API keys to authenticate requests. Sign up for an account at the <a href="https://dev.pokemontcg.io/">Pokémon TCG Developer Portal</a> to get your API key for free.
+                    If you feel as though your API key has been compromised, you can generate a new key at any time.
+                    Authentication to the API is performed via the X-Api-Key header. Provide your API key in the headers of all requests to authenticate to the Pokémon TCG API.
+                    All API requests must be made over HTTPS. Calls made over plain HTTP will fail will redirect to HTTPS automatically. API requests without authentication won't fail, but your rate limits are drastically reduced.
+                </div>
+                <div class="sub-content-title">API Reference</div>
+                <div class="sub-content-sub-title">Cards</div>
+                <div class="maxi-sub">The card object</div>
+                <div class="sub-content"><a href="https://docs.pokemontcg.io/api-reference/cards/card-object#attributes">Check out the attributes on the official documentation</a></div>
+                <div class="maxi-sub">Get a card</div>
+                <div class="sub-content">To get the details of a card</div>
+                <div class="sub-content">
+                    <h3>HTTP Request</h3>
+                </div>
+                <pre><code>GET https://api.pokemontcg.io/v2/cards/&lt;id&gt;</code></pre>
+                <div class="sub-content">
+                    <h3>URL Parameters</h3>
+                </div>
+                <div class="sub-content">id</div>
+                <div class="maxi-sub">Search cards</div>
+                <div class="sub-content">
+                    <h3>HTTP Request</h3>
+                </div>
+                <pre><code>GET https://api.pokemontcg.io/v2/cards</code></pre>
+                <div class="sub-content">
+                    <h3>Query parameters</h3>
+                </div>
+                <div class="sub-content"><a href="https://docs.pokemontcg.io/api-reference/cards/search-cards#query-parameters">Check it out here</a></div>
+                <div class="sub-content">
+                    <h3>Matching</h3>
+                </div>
+                <div class="sub-content">You can match your query to a keyword, do wildcard matching, exact matching and more... <a href="https://docs.pokemontcg.io/api-reference/cards/search-cards/#keyword-matching">examples</a></div>
+                <div class="sub-content-sub-title">Sets</div>
+                <div class="maxi-sub">The set object</div>
+                <div class="maxi-sub">Get a set</div>
+                <div class="maxi-sub">Search sets</div>
+                <div class="sub-content-sub-title">Types</div>
+                <div class="maxi-sub">Get types</div>
+                <div class="sub-content">Get all possible types</div>
+                <div class="sub-content">
+                    <h3>HTTP Request</h3>
+                </div>
+                <pre><code>GET https://api.pokemontcg.io/v2/types</code></pre>
+            </div>
+        </div>
     </div>
     <!-- Main content -->
     <!-- Footer -->

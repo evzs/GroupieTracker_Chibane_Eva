@@ -19,20 +19,20 @@
     </div>
     <div id="nav-menu">
       <div class="nav-item">
-        <a href="/index"> <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/index"> <img src="../assets/img/phome.svg" alt="pokeball-icon" style="height: 44px; width:auto;">
           HOME</a>
       </div>
       <div id="search">SEARCH</div>
       <div class="nav-item">
-        <a href="/name-search"> <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/name-search"> <img src="../assets/img/pditto.svg" alt="ditto-icon" style="height: 44px; width:auto;">
           POKEMON</a>
       </div>
       <div class="nav-item onpage">
-        <a href="#"> <img src="../assets/img/sets.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="#"> <img src="../assets/img/sets.svg" alt="cards-icon" style="height: 44px; width:auto;">
           SETS</a>
       </div>
       <div class="nav-item">
-        <a href="/type-search"> <img src="../assets/img/ptype.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/type-search"> <img src="../assets/img/ptype.svg" alt="type-icon" style="height: 44px; width:auto;">
           TYPES</a>
       </div>
     </div>
@@ -90,17 +90,14 @@
   <div class="main">
     <div class="row">
       {{ range . }}
-      <div class="expansion glow">
-
-        <div class="set-minimg"> <img src="{{ .Images.Symbol }}" alt="{{ .Name }} Symbol" style="height: 16px; width: auto;"></div>
-        <div class="set-image">          <a href="/set-cards?set-name={{ .Name }}"><img src="{{ .Images.Logo }}" alt="{{ .Name }} Logo" style="height: 64px; width: auto;">        </a></div>
-        <div class="set-name">{{ .Name }}</div>
-
-      </div>
+        <div class="expansion glow">
+          <div class="set-minimg"> <img src="{{ .Images.Symbol }}" alt="{{ .Name }} Symbol" style="height: 16px; width: auto;"></div>
+          <div class="set-image">          <a href="/set-cards?set-name={{ .Name }}"><img src="{{ .Images.Logo }}" alt="{{ .Name }} Logo" style="height: 64px; width: auto;">        </a></div>
+          <div class="set-name">{{ .Name }}</div>
+        </div>
       {{ end }}
     </div>
   </div>
-
   <!-- Main content -->
   <!-- Footer -->
   <footer>

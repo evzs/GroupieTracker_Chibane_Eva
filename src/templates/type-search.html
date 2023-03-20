@@ -19,20 +19,20 @@
     </div>
     <div id="nav-menu">
       <div class="nav-item">
-        <a href="/index"><img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/index"><img src="../assets/img/phome.svg" alt="pokeball-icon" style="height: 44px; width:auto;">
           HOME</a>
       </div>
       <div id="search">SEARCH</div>
       <div class="nav-item">
-        <a href="/name-search"> <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/name-search"> <img src="../assets/img/pditto.svg" alt="ditto-icon" style="height: 44px; width:auto;">
           POKEMON</a>
       </div>
       <div class="nav-item">
-        <a href="/set-search"><img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/set-search"><img src="../assets/img/psets.svg" alt="cards-icon" style="height: 44px; width:auto;">
           SETS</a>
       </div>
       <div class="nav-item onpage">
-        <a href="#"> <img src="../assets/img/type.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="#"> <img src="../assets/img/type.svg" alt="type-icon" style="height: 44px; width:auto;">
           TYPES</a>
       </div>
     </div>
@@ -43,19 +43,19 @@
   <div id="nav-content">
     <div id="nav-menu">
       <div class="nav-item">
-        <a href="/index">   <img src="../assets/img/phome.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/index">   <img src="../assets/img/phome.svg" alt="pokeball-icon" style="height: 44px; width:auto;">
         </a>
       </div>
       <div class="nav-item">
-        <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/name-search">  <img src="../assets/img/pditto.svg" alt="ditto-icon" style="height: 44px; width:auto;">
         </a>
       </div>
       <div class="nav-item">
-        <a href="/set-search">  <img src="../assets/img/psets.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="/set-search">  <img src="../assets/img/psets.svg" alt="cards-icon" style="height: 44px; width:auto;">
         </a>
       </div>
       <div class="nav-item onpage">
-        <a href="#">   <img src="../assets/img/type.svg" alt="home" style="height: 44px; width:auto;">
+        <a href="#">   <img src="../assets/img/type.svg" alt="type-icon" style="height: 44px; width:auto;">
         </a>
       </div>
     </div>
@@ -119,17 +119,18 @@
       {{range .}}
         <div class="card">
           <div class="title">
-
             {{.Name}}
           </div>
           <div class="image">  <a href="/card-details?id={{.ID}}"><img src="{{.Images.Small}}" alt="{{.Name}}" class="glow">       </a></div>
           <div class="description">
             Artist: {{.Artist}}
           </div>
+          <div class="description">
+            Rarity: {{.Rarity}}
+          </div>
         </div>
       {{end}}
     </div>
-
   </div>
   <!-- Main content -->
   <!-- Footer -->
