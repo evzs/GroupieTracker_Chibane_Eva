@@ -1,4 +1,3 @@
-/* MAIN CSS */
 * {
     margin: 0;
     padding: 0;
@@ -21,10 +20,8 @@ html {
     margin-left: 25vh
 }
 
-
-/* homepage */
 .sub-content-title {
-    color: #ffffff;
+    color: #fff;
     align-self: flex-start;
     width: 300px;
     padding: 8px;
@@ -34,11 +31,11 @@ html {
     border-left: inset 16px #a798e4;
     border-radius: 4px;
     font-size: 32px;
-    font-family: "Saira Condensed", sans-serif;
+    font-family: "Saira Condensed", sans-serif
 }
 
 .sub-content-sub-title {
-    color: #ffffff;
+    color: #fff;
     width: 200px;
     align-self: flex-start;
     padding: 8px;
@@ -47,11 +44,11 @@ html {
     margin-bottom: 2px;
     border-left: inset 16px #a798e4;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 24px
 }
 
 .maxi-sub {
-    color: #ffffff;
+    color: #fff;
     width: 150px;
     align-self: flex-start;
     padding: 8px;
@@ -60,19 +57,18 @@ html {
     margin-bottom: 2px;
     border-left: inset 16px #00ffb4;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 16px
 }
 
 .sub-content {
-    color: #ffffff;
+    color: #fff;
     align-self: flex-start;
-    padding: 8px;
+    padding: 8px
 }
 
 .sub-content a {
-    text-decoration: none;
+    text-decoration: none
 }
-
 
 .sub-content a:hover {
     color: #16dba0;
@@ -82,19 +78,19 @@ html {
 pre {
     display: flex;
     align-self: flex-start;
-    margin-left: 32px;
+    margin-left: 32px
 }
 
 pre code {
     padding: 8px;
     border-radius: 8px;
-    background: #231b47;
+    background: #231b47
 }
 
 code {
     word-wrap: break-word;
     align-self: flex-start;
-    color: #ffffff;
+    color: #fff
 }
 
 .homepage {
@@ -104,7 +100,7 @@ code {
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 70px;
+    padding: 70px
 }
 
 .content-container {
@@ -114,19 +110,18 @@ code {
     justify-content: center;
     width: 100%;
     height: 100%;
-    border-left: rgba(22, 219, 160, 0.5) 0.7px solid;
-    padding-left: 8px;
+    border-left: rgba(22, 219, 160, .5) .7px solid;
+    padding-left: 8px
 }
-
 
 @media screen and (max-width:768px) {
     .content-container {
         padding: 0;
-        border: 0;
+        border: 0
     }
 
     .homepage {
-        padding: 0;
+        padding: 0
     }
 
     pre {
@@ -135,35 +130,34 @@ code {
         white-space: pre-wrap;
         word-wrap: break-word;
         font-size: 100%;
-        border: 0;
+        border: 0
     }
 
     pre>code {
-        margin: 0;
+        margin: 4px;
         width: 100%;
         white-space: pre-wrap;
-        padding: 0;
+        padding: 8px;
         font-size: 100%;
-        border: 0;
+        border: 0
     }
 
     .sub-content-title {
         width: 100%;
-        margin: 5px;
+        margin: 0
     }
 
     .sub-content-sub-title {
-        margin: 6px;
-        width: 100%;
+        margin: 0;
+        width: 100%
     }
 
     .maxi-sub {
-        margin: 7px;
-        width: 100%;
+        margin: 0;
+        width: 100%
     }
 }
 
-/* navigation */
 #nav-vertical {
     display: flex;
     flex-direction: column;
@@ -181,7 +175,7 @@ code {
     border-radius: 12px;
     overflow: hidden;
     z-index: 999;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
 }
 
 #nav-horizontal {
@@ -305,7 +299,7 @@ a img {
     padding: 8px;
     border-top: ridge 4px #7c70b5;
     border-bottom: ridge 4px #7c70b5;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 @media screen and (max-width:768px) {
@@ -332,8 +326,6 @@ a img {
         display: none !important
     }
 }
-
-/* footer */
 
 footer {
     font-weight: 300;
@@ -421,15 +413,14 @@ footer a:hover {
 }
 
 .glow {
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out
 }
 
-/* cards */
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .card {
@@ -446,8 +437,7 @@ footer a:hover {
     background-color: rgba(35, 27, 71, .5);
     border-radius: 12px;
     color: #fff;
-    gap: 8px;
-
+    gap: 8px
 }
 
 .card .title {
@@ -457,15 +447,15 @@ footer a:hover {
     align-self: flex-start;
     font-size: 32px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis
 }
 
 .card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px transparent;
+    box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px transparent
 }
 
 .expansion {
@@ -485,7 +475,7 @@ footer a:hover {
 }
 
 .set-image img {
-    max-width: 100%;
+    max-width: 100%
 }
 
 .set-minimg {
@@ -519,7 +509,7 @@ footer a:hover {
     color: #16dba0;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis !important;
+    text-overflow: ellipsis !important
 }
 
 .container {
@@ -542,8 +532,6 @@ footer a:hover {
     }
 }
 
-/* details */
-
 .center {
     display: flex;
     flex-direction: column;
@@ -551,7 +539,7 @@ footer a:hover {
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 70px;
+    padding: 70px
 }
 
 .detailed-card {
@@ -563,12 +551,12 @@ footer a:hover {
     padding: 15px;
     backdrop-filter: blur(7px) saturate(180%);
     -webkit-backdrop-filter: blur(7px) saturate(180%);
-    background-color: rgba(35, 27, 71, 0.5);
+    background-color: rgba(35, 27, 71, .5);
     border-radius: 12px;
-    color: #ffffff;
+    color: #fff;
     border: ridge 8px #7c70b5;
     gap: 8px;
-    font-family: "Saira Condensed", sans-serif;
+    font-family: "Saira Condensed", sans-serif
 }
 
 .image-column {
@@ -576,15 +564,15 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 8px;
-    border-right: #16dba0 2px solid;
+    border-right: #16dba0 2px solid
 }
 
 .image-column img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px transparent;
+    box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px transparent
 }
 
 .details-column {
@@ -594,13 +582,13 @@ footer a:hover {
     justify-content: center;
     padding: 8px;
     height: 100%;
-    width: 300px;
+    width: 300px
 }
 
 .column-header {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 .tag {
@@ -610,7 +598,7 @@ footer a:hover {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    gap: 8px;
+    gap: 8px
 }
 
 .big-tag {
@@ -623,7 +611,7 @@ footer a:hover {
     font-size: 24px;
     gap: 8px;
     white-space: nowrap;
-    color: #16dba0;
+    color: #16dba0
 }
 
 .main-info {
@@ -635,7 +623,7 @@ footer a:hover {
     height: 100%;
     font-size: 24px;
     white-space: nowrap;
-    padding: 8px;
+    padding: 8px
 }
 
 .value {
@@ -646,7 +634,7 @@ footer a:hover {
     width: 100%;
     height: 100%;
     gap: 8px;
-    color: #FFFFFF;
+    color: #fff
 }
 
 .big-value {
@@ -657,7 +645,7 @@ footer a:hover {
     height: 100%;
     font-size: 24px;
     color: #231b47;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .sub-container>.value {
@@ -666,7 +654,7 @@ footer a:hover {
     align-self: flex-end;
     height: 100%;
     font-size: 16px;
-    color: #ffffff;
+    color: #fff
 }
 
 .detailed-card>.description {
@@ -676,7 +664,7 @@ footer a:hover {
     justify-content: space-between;
     height: 100%;
     font-size: 12px;
-    color: #170041;
+    color: #170041
 }
 
 #combat {
@@ -687,11 +675,11 @@ footer a:hover {
     justify-content: center;
     width: 100%;
     border-radius: 12px;
-    border: ridge 8px #ffffff;
+    border: ridge 8px #fff;
     height: fit-content;
     padding: 15px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px transparent;
+    box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px transparent
 }
 
 .container {
@@ -701,7 +689,7 @@ footer a:hover {
     justify-content: center;
     height: 100%;
     width: 100%;
-    gap: 8px;
+    gap: 8px
 }
 
 .sub-container {
@@ -711,7 +699,7 @@ footer a:hover {
     justify-content: center;
     height: 100%;
     width: 100%;
-    gap: 8px;
+    gap: 8px
 }
 
 .sub-title {
@@ -722,96 +710,92 @@ footer a:hover {
     margin-bottom: 2px;
     border-left: inset 8px #a798e4;
     border-radius: 4px;
-    font-family: 'Signika', sans-serif;
+    font-family: Signika, sans-serif
 }
 
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
     .center {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 0;
+        padding: 0
     }
 
     .detailed-card {
         display: flex;
         flex-direction: column;
         margin-top: 64px;
-        padding: 0;
+        padding: 0
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .detailed-card {
         flex-direction: column;
         margin-top: 64px;
         padding: 4px;
-        width: 100%;
+        width: 100%
     }
 
     .image-column {
         padding: 0;
         align-items: center;
-        border: none;
+        border: none
     }
 
     .column-header {
-        padding: 0;
+        padding: 0
     }
 
     .image-column img {
         width: 100% !important;
         height: 100% !important;
-        padding: 0;
+        padding: 0
     }
 
     .big-tag {
         font-size: 32px;
-        padding: 4px;
+        padding: 4px
     }
 
     .big-value {
         font-size: 18px;
-        padding: 0;
+        padding: 0
     }
 
     .details-column {
         padding: 0;
-
-        align-self: center;
+        align-self: center
     }
 }
 
-@media (max-width: 480px) {
-
+@media (max-width:480px) {
     .big-tag {
         font-size: 24px;
-        padding: 4px;
+        padding: 4px
     }
 
     .big-value {
         font-size: 18px;
-        padding: 0;
+        padding: 0
     }
 
     .value {
         font-size: 16px;
-        padding: 0;
+        padding: 0
     }
 
     .description {
-        font-size: 10px;
+        font-size: 10px
     }
 
     #combat {
-        padding: 0;
+        padding: 0
     }
 }
 
-
-/* search */
 .search-content-box {
     display: flex;
     justify-content: center;
@@ -871,7 +855,7 @@ form {
     border: none;
     font-weight: 600;
     border-left: #00ffb4 8px inset;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .type-box form {
@@ -1018,11 +1002,10 @@ input[type=checkbox]:checked+label[for=water] {
     }
 }
 
-/* misc and features */
 .glow:hover {
-    -webkit-box-shadow: 0px 0px 56px 19px rgba(189, 255, 235, 0.08);
-    -moz-box-shadow: 0px 0px 56px 19px rgba(189, 255, 235, 0.08);
-    box-shadow: 0px 0px 56px 19px rgba(189, 255, 235, 0.08);
+    -webkit-box-shadow: 0 0 56px 19px rgba(189, 255, 235, .08);
+    -moz-box-shadow: 0 0 56px 19px rgba(189, 255, 235, .08);
+    box-shadow: 0 0 56px 19px rgba(189, 255, 235, .08)
 }
 
 .onpage {
@@ -1052,16 +1035,16 @@ input[type=checkbox]:checked+label[for=water] {
 }
 
 #back {
-    padding: 16px;
+    padding: 16px
 }
 
 #back a {
     font-family: "Saira Condensed", sans-serif;
     font-size: 30px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #fff;
     padding: 4px;
     border-radius: 8px;
     background: #16dba0;
-    border-left: #00ffb4 8px inset;
+    border-left: #00ffb4 8px inset
 }
