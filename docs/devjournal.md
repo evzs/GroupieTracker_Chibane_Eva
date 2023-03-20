@@ -116,6 +116,7 @@ Afternoon/evening :
 - changed folder structure
 
 ### 2023-03-20
+Morning :
 - filled the homepage with API information, not done at all, could not take the time for it before turning everything in
 - still has some kind of layout, would like to appropriate it more one day, add toggles
 - checked if everything worked fine enough
