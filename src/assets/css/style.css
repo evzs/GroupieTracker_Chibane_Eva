@@ -81,7 +81,8 @@ html {
     padding: 8px
 }
 
-.sub-content a {
+.sub-content > a {
+    color: #231b47;
     text-decoration: none
 }
 
