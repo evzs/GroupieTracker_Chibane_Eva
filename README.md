@@ -10,7 +10,7 @@ I personally chose the Pokémon TCG API. As I used to love collecting Pokémon c
 As most of the data is handled with a Golang server, in order to use the website and make search search queries you will have to :
 - clone the repository
 ```
-https://github.com/evzs/GroupieTracker_Chibane_Eva.git
+https://github.com/evzs/PokeTracker.git
 ```
 - open the terminal in the src folder's root and run the following command:
 ```
